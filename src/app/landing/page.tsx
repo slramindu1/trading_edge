@@ -362,13 +362,13 @@ const HomePage = () => {
                 key={i}
                 className="break-inside-avoid p-6 rounded-2xl shadow-md"
               >
-                <img
+                <Image
                   src={t.screenshot}
                   alt={`Testimonial from ${t.name}`}
                   className="w-full rounded-xl"
                 />
                 <div className="flex items-center mt-4 pt-4 border-t border-gray-100">
-                  <img
+                  <Image
                     src={t.image}
                     alt={t.name}
                     className="w-10 h-10 rounded-full mr-4"
