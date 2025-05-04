@@ -289,7 +289,7 @@ const HomePage = () => {
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="Our Membership" />
             <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-              What's Included In The Membership
+              What&apos;s Included In The Membership
             </h2>
             <p className="text-muted-foreground mt-6">
               Learn More About Our Membership
