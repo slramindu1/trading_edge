@@ -1,10 +1,11 @@
 import { Footer, Navbar } from "@/components";
 import { SITE_CONFIG } from "@/config";
 import { cn } from "@/lib/utils";
-import "@/styles/globals.css";
+import "../styles/globals.css";
 import { ClerkProvider } from '@clerk/nextjs';
 import { dark } from '@clerk/themes';
 import { Inter } from "next/font/google";
+import Script from "next/script"; // ✅ Import Next.js Script component
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,13 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
+            <head>
+                {/* ✅ PayHere SDK Script */}
+                <Script
+                    src="https://www.payhere.lk/lib/payhere.js"
+                    strategy="beforeInteractive"
+                />
+            </head>
             <body
                 className={cn(
                     "min-h-screen bg-background text-foreground antialiased max-w-full overflow-x-hidden",
@@ -29,4 +37,4 @@ export default function RootLayout({
             </body>
         </html>
     );
-};
+}
