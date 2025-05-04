@@ -304,35 +304,33 @@ const HomePage = () => {
             </p>
           </div>
         </Container>
-        {/* Card Section */}
         <main className="min-h-screen text-foreground">
-          {/* Background pattern */}
           <div className="absolute inset-0 opacity-20 z-0"></div>
-
-          {/* Gradient effect */}
           <div className="absolute top-0 left-0 right-0 h-[500px] gradient opacity-10 blur-[100px] z-0"></div>
 
-          <div className="container mx-auto px-4 py-16 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left column - Course info */}
-              <div className="space-y-8">
-                <div>
-                  {/* <Badge
-                    // variant="outline"
-                    className="bg-primary/10 text-primary border-primary/20 px-4 py-1.5 mb-4"
-                  >
-                    INCLUDED
-                  </Badge> */}
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    The Fanatic Way Course Module
-                  </h1>
-                  <p className="text-xl text-primary">
-                    A NO BS Trading Course! 16 modules, 120 comprehensive
-                    lessons.
-                  </p>
-                </div>
+          <div className="container mx-auto px-4 py-8 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Left column - Course preview */}
+              <div className="relative z-10">
+                <Image
+                  src="/assets/poster1.png"
+                  alt="The Fanatic Way Course Preview"
+                  width={600}
+                  height={600}
+                  className="rounded-lg w-full"
+                />
+              </div>
 
-                <div className="space-y-4">
+              {/* Right column - Course info */}
+              <div className="space-y-6">
+                <h1 className="text-4xl md:text-5xl font-bold mb-2">
+                  The Fanatic Way Course Module
+                </h1>
+                <p className="text-xl text-primary">
+                  A NO BS Trading Course! 16 modules, 120 comprehensive lessons.
+                </p>
+
+                <div className="space-y-3">
                   <p className="text-lg">
                     The aim of the course is to{" "}
                     <span className="font-semibold">
@@ -346,31 +344,31 @@ const HomePage = () => {
                     market in a simple and systematic way.
                   </p>
 
-                  <h3 className="text-xl font-bold mt-8">Results:</h3>
+                  <h3 className="text-xl font-bold">Results:</h3>
 
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="text-primary h-6 w-6 flex-shrink-0 mt-0.5" />
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
                       <span>
                         Complete clarity of what you look for when you sit on
                         your charts.
                       </span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="text-primary h-6 w-6 flex-shrink-0 mt-0.5" />
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
                       <span>
                         A systematic, proven system that you trust at 1000%.
                       </span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="text-primary h-6 w-6 flex-shrink-0 mt-0.5" />
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
                       <span>
                         Obtain incredible discipline to stop overtrading and
                         hesitating.
                       </span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle className="text-primary h-6 w-6 flex-shrink-0 mt-0.5" />
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
                       <span>
                         Learn exactly how to find, enter, manage and exit
                         trades.
@@ -378,7 +376,7 @@ const HomePage = () => {
                     </li>
                   </ul>
 
-                  <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                  <div className="flex flex-col sm:flex-row gap-4 mt-4">
                     <Button variant="outline" size="lg" className="group">
                       <CirclePlay className="mr-2 h-5 w-5 group-hover:text-primary transition-colors" />
                       SEE WHAT&apos;S INSIDE
@@ -392,18 +390,173 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="container mx-auto px-4 py-8 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+             
 
-              {/* Right column - Course preview */}
-              <div className="relative">
-                <div className="card-mask absolute inset-0 z-0 rounded-xl"></div>
-                <div className="relative z-10 bg-card/50 backdrop-blur-sm p-4 rounded-xl border border-border/50 shadow-xl use-automation-zoom-in">
-                  <Image
-                    src="/assets/poster1.png"
-                    alt="The Fanatic Way Course Preview"
-                    width={600}
-                    height={600}
-                    className="rounded-lg w-full"
-                  />
+              {/* Left column - Course info */}
+              <div className="space-y-6">
+                <h1 className="text-4xl md:text-5xl font-bold mb-2">
+                  The Fanatic Way Course Module
+                </h1>
+                <p className="text-xl text-primary">
+                  A NO BS Trading Course! 16 modules, 120 comprehensive lessons.
+                </p>
+
+                <div className="space-y-3">
+                  <p className="text-lg">
+                    The aim of the course is to{" "}
+                    <span className="font-semibold">
+                      eliminate all the noise and fluff
+                    </span>{" "}
+                    you have learned so far and introduce a{" "}
+                    <span className="font-semibold">
+                      powerful and proven approach
+                    </span>{" "}
+                    for analyzing and trading the Forex, Indices and Futures
+                    market in a simple and systematic way.
+                  </p>
+
+                  <h3 className="text-xl font-bold">Results:</h3>
+
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                      <span>
+                        Complete clarity of what you look for when you sit on
+                        your charts.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                      <span>
+                        A systematic, proven system that you trust at 1000%.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                      <span>
+                        Obtain incredible discipline to stop overtrading and
+                        hesitating.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                      <span>
+                        Learn exactly how to find, enter, manage and exit
+                        trades.
+                      </span>
+                    </li>
+                  </ul>
+
+                  <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                    <Button variant="outline" size="lg" className="group">
+                      <CirclePlay className="mr-2 h-5 w-5 group-hover:text-primary transition-colors" />
+                      SEE WHAT&apos;S INSIDE
+                    </Button>
+                    <Button
+                      size="lg"
+                      className="bg-primary hover:bg-primary/90"
+                    >
+                      ENROLL NOW!
+                    </Button>
+                  </div>
+                </div>
+              </div>
+               {/* Right column - Course preview */}
+               <div className="relative z-10">
+                <Image
+                  src="/assets/poster1.png"
+                  alt="The Fanatic Way Course Preview"
+                  width={600}
+                  height={600}
+                  className="rounded-lg w-full"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="container mx-auto px-4 py-8 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Left column - Course preview */}
+              <div className="relative z-10">
+                <Image
+                  src="/assets/poster1.png"
+                  alt="The Fanatic Way Course Preview"
+                  width={600}
+                  height={600}
+                  className="rounded-lg w-full"
+                />
+              </div>
+
+              {/* Right column - Course info */}
+              <div className="space-y-6">
+                <h1 className="text-4xl md:text-5xl font-bold mb-2">
+                  The Fanatic Way Course Module
+                </h1>
+                <p className="text-xl text-primary">
+                  A NO BS Trading Course! 16 modules, 120 comprehensive lessons.
+                </p>
+
+                <div className="space-y-3">
+                  <p className="text-lg">
+                    The aim of the course is to{" "}
+                    <span className="font-semibold">
+                      eliminate all the noise and fluff
+                    </span>{" "}
+                    you have learned so far and introduce a{" "}
+                    <span className="font-semibold">
+                      powerful and proven approach
+                    </span>{" "}
+                    for analyzing and trading the Forex, Indices and Futures
+                    market in a simple and systematic way.
+                  </p>
+
+                  <h3 className="text-xl font-bold">Results:</h3>
+
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                      <span>
+                        Complete clarity of what you look for when you sit on
+                        your charts.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                      <span>
+                        A systematic, proven system that you trust at 1000%.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                      <span>
+                        Obtain incredible discipline to stop overtrading and
+                        hesitating.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                      <span>
+                        Learn exactly how to find, enter, manage and exit
+                        trades.
+                      </span>
+                    </li>
+                  </ul>
+
+                  <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                    <Button variant="outline" size="lg" className="group">
+                      <CirclePlay className="mr-2 h-5 w-5 group-hover:text-primary transition-colors" />
+                      SEE WHAT&apos;S INSIDE
+                    </Button>
+                    <Button
+                      size="lg"
+                      className="bg-primary hover:bg-primary/90"
+                    >
+                      ENROLL NOW!
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
