@@ -398,7 +398,7 @@ const HomePage = () => {
                 <div className="card-mask absolute inset-0 z-0 rounded-xl"></div>
                 <div className="relative z-10 bg-card/50 backdrop-blur-sm p-4 rounded-xl border border-border/50 shadow-xl use-automation-zoom-in">
                   <Image
-                    src="/assets/poster1.jpg"
+                    src="/assets/poster1.png"
                     alt="The Fanatic Way Course Preview"
                     width={600}
                     height={600}
