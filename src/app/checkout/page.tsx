@@ -55,7 +55,7 @@ export default function CheckoutPage() {
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-semibold text-foreground">What you'll get:</h3>
+            <h3 className="font-semibold text-foreground">What you'll get:</h3>
               <ul className="list-disc pl-5 space-y-1 text-foreground">
                 <li>The Zero To Funded Course</li>
                 <li>The Photon Service</li>
