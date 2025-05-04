@@ -324,7 +324,7 @@ const HomePage = () => {
 
               {/* Right column - Course info */}
               <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl font-bold mb-2">
+                <h1 className="text-6xl md:text-3xl font-bold mb-2">
                   The Fanatic Way Course Module
                 </h1>
                 <p className="text-xl text-primary">
@@ -395,7 +395,7 @@ const HomePage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Left column - Course info */}
               <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl font-bold mb-2">
+                <h1 className="text-4xl md:text-3xl font-bold mb-2">
                   The Fanatic Way Course Module
                 </h1>
                 <p className="text-xl text-primary">
@@ -487,7 +487,7 @@ const HomePage = () => {
 
               {/* Right column - Course info */}
               <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl font-bold mb-2">
+                <h1 className="text-4xl md:text-3xl font-bold mb-2">
                   The Fanatic Way Course Module
                 </h1>
                 <p className="text-xl text-primary">
