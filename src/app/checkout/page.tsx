@@ -55,7 +55,9 @@ export default function CheckoutPage() {
             </div>
 
             <div className="space-y-2">
-            <h3 className="font-semibold text-foreground">What you'll get:</h3>
+              <h3 className="font-semibold text-foreground">
+                What you&apos;ll get:
+              </h3>
               <ul className="list-disc pl-5 space-y-1 text-foreground">
                 <li>The Zero To Funded Course</li>
                 <li>The Photon Service</li>
@@ -134,7 +136,9 @@ export default function CheckoutPage() {
 
               {/* Payment Method */}
               <div className="space-y-4 pt-4 border-t border-border">
-                <div className="font-semibold text-foreground">Payment Method</div>
+                <div className="font-semibold text-foreground">
+                  Payment Method
+                </div>
                 <RadioGroup
                   value={paymentMethod}
                   onValueChange={setPaymentMethod}
@@ -184,9 +188,7 @@ export default function CheckoutPage() {
               </div>
 
               {/* Submit Buttons */}
-              {paymentMethod === "card" && (
-                 <PayHereButton />
-              )}
+              {paymentMethod === "card" && <PayHereButton />}
 
               {paymentMethod === "slip" && (
                 <Button
