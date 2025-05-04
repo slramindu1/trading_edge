@@ -297,10 +297,7 @@ const HomePage = () => {
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="Our Membership" />
             <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-              {/* eslint-disable-next-line react/no-unescaped-entities */}
-              <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                What&apos;s Included In The Membership
-              </h2>
+              What&apos;s Included In The Membership
             </h2>
             <p className="text-muted-foreground mt-6">
               Learn More About Our Membership
@@ -384,7 +381,7 @@ const HomePage = () => {
                   <div className="flex flex-col sm:flex-row gap-4 mt-8">
                     <Button variant="outline" size="lg" className="group">
                       <CirclePlay className="mr-2 h-5 w-5 group-hover:text-primary transition-colors" />
-                      SEE WHAT'S INSIDE
+                      SEE WHAT&apos;S INSIDE
                     </Button>
                     <Button
                       size="lg"
