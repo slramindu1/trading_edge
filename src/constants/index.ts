@@ -25,6 +25,7 @@ export const testimonials = [
     username: "rameshp",
     image: "https://randomuser.me/api/portraits/men/45.jpg",
     screenshot: "/assets/1.jpg",
+    
   },
   {
     name: "Nimali Jayasuriya",
