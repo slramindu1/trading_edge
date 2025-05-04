@@ -297,7 +297,10 @@ const HomePage = () => {
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="Our Membership" />
             <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-              What&apos;s Included In The Membership
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
+              <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                What&apos;s Included In The Membership
+              </h2>
             </h2>
             <p className="text-muted-foreground mt-6">
               Learn More About Our Membership
