@@ -33,7 +33,7 @@ export function PayHereButton() {
   return (
     <Button
       onClick={handlePayHere}
-      className="w-full bg-green-600 hover:bg-green-700 text-white"
+      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
     >
       Pay with PayHere
     </Button>
