@@ -292,7 +292,7 @@ const HomePage = () => {
 
       {/* {Whats Incldued Membership} */}
       <Wrapper className="flex flex-col items-center justify-center py-12 relative">
-        <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
+        {/* <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div> */}
         <Container className="flex flex-col items-center justify-center">
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="Our Membership" />
@@ -304,9 +304,10 @@ const HomePage = () => {
             </p>
           </div>
         </Container>
-        <main className="min-h-screen text-foreground">
+
+        <Container>
           <div className="absolute inset-0 opacity-20 z-0"></div>
-          <div className="absolute top-0 left-0 right-0 h-[500px] gradient opacity-10 blur-[100px] z-0"></div>
+          {/* <div className="absolute top-0 left-0 right-0 h-[500px] gradient opacity-10 blur-[100px] z-0"></div> */}
 
           <div className="container mx-auto px-4 py-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -391,11 +392,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="container mx-auto px-4 py-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-             
-
               {/* Left column - Course info */}
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-5xl font-bold mb-2">
@@ -465,8 +462,8 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-               {/* Right column - Course preview */}
-               <div className="relative z-10">
+              {/* Right column - Course preview */}
+              <div className="relative z-10">
                 <Image
                   src="/assets/poster1.png"
                   alt="The Fanatic Way Course Preview"
@@ -476,8 +473,6 @@ const HomePage = () => {
                 />
               </div>
             </div>
-          </div>
-          <div className="container mx-auto px-4 py-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Left column - Course preview */}
               <div className="relative z-10">
@@ -561,7 +556,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-        </main>
+        </Container>
       </Wrapper>
 
       {/* Course Curiculam */}
