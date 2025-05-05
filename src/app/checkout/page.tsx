@@ -46,14 +46,25 @@ export default function CheckoutPage() {
     }
   };
 
-  const handleVerify = () => {
-    // NOTE: Replace this with backend verification later
-    if (pin === "123456") {
-      setIsEmailVerified(true);
-    } else {
-      alert("Invalid code.");
+  const handleVerify = async () => {
+    try {
+      const res = await fetch("https://tradingedgefx.com/verify-code.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, pin }),
+      });
+  
+      const data = await res.json();
+      if (data.success) {
+        setIsEmailVerified(true);
+      } else {
+        alert("Invalid or expired code.");
+      }
+    } catch (err) {
+      alert("Verification failed.");
     }
   };
+  
 
   function handleSlipUpload(event: ChangeEvent<HTMLInputElement>): void {
     throw new Error("Function not implemented.");
@@ -224,8 +235,7 @@ export default function CheckoutPage() {
                     </Label>
                   </div>
                 </div>
-
-                {paymentMethod === "card" && <PayHereButton />}
+                <div className="mt-4">{paymentMethod === "card" && <PayHereButton />}</div>
 
                 {paymentMethod === "slip" && (
                   <Button className="w-full">Confirm Bank Payment</Button>
