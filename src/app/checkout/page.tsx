@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 import Image from "next/image";
 import { Check } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -20,27 +19,45 @@ import {
 import { PayHereButton } from "@/components/global/PaymentForm";
 
 export default function CheckoutPage() {
-  const [paymentMethod, setPaymentMethod] = useState(""); // "card", "slip"
-  const [isFormComplete, setIsFormComplete] = useState(false);
+  const [email, setEmail] = useState("");
+  const [isEmailEntered, setIsEmailEntered] = useState(false);
+  const [isEmailVerified, setIsEmailVerified] = useState(false);
+  const [pin, setPin] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState("");
 
-  // form state
-  const [formData, setFormData] = useState({
-    email: "",
-    name: "",
-    address1: "",
-    city: "",
-    state: "",
-    zip: "",
-  });
+  const [country, setCountry] = useState("United States");
 
-  const handleContinue = () => {
-    const { email, name, address1, city, state, zip } = formData;
-    if (email && name && address1 && city && state && zip) {
-      setIsFormComplete(true);
-    } else {
-      alert("Please fill in all fields.");
+  const handleSendCode = async () => {
+    try {
+      const res = await fetch("https://tradingedgefx.com/send-code.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        alert("Verification code sent to your email.");
+      } else {
+        alert("Failed to send code.");
+      }
+    } catch (err) {
+      alert("Error sending code.");
     }
   };
+
+  const handleVerify = () => {
+    // NOTE: Replace this with backend verification later
+    if (pin === "123456") {
+      setIsEmailVerified(true);
+    } else {
+      alert("Invalid code.");
+    }
+  };
+
+  function handleSlipUpload(event: ChangeEvent<HTMLInputElement>): void {
+    throw new Error("Function not implemented.");
+  }
 
   return (
     <div className="min-h-screen p-4 md:p-8">
@@ -50,7 +67,7 @@ export default function CheckoutPage() {
           <div className="relative aspect-[4/3] w-full">
             <Image
               src="/assets/mokup.avif"
-              alt="Photon Pro Lifetime Membership"
+              alt="Photon Pro"
               width={800}
               height={400}
               className="rounded-lg object-cover w-full"
@@ -64,30 +81,21 @@ export default function CheckoutPage() {
             <p className="text-foreground">One-time payment = 1 Year Access</p>
 
             <div className="flex items-center gap-2">
-              <p className="text-foreground">All future course updates included</p>
+              <p className="text-foreground">
+                All future course updates included
+              </p>
               <div className="h-5 w-5 rounded-full bg-primary flex items-center justify-center">
                 <Check className="h-3 w-3 text-primary-foreground" />
               </div>
             </div>
 
-            <div className="space-y-2">
-              <h3 className="font-semibold text-foreground">What you&apos;ll get:</h3>
-              <ul className="list-disc pl-5 space-y-1 text-foreground">
-                <li>The Zero To Funded Course</li>
-                <li>The Photon Service</li>
-                <li>The Trading Floor (Discord)</li>
-                <li>130+ Video Lessons</li>
-                <li>50+ Hours of Step By Step Training</li>
-                <li>Chart Exercises + Walkthroughs</li>
-                <li>24/7 Support</li>
-                <li>Minimum 3:1 R:R Trades</li>
-                <li>Daily Chart Analysis + Markups</li>
-                <li>Trade Recap Videos</li>
-                <li>Daily Session Recap Videos</li>
-                <li>Live Q&A Meetups</li>
-                <li>Plug & Play Spreadsheets & Tools</li>
-              </ul>
-            </div>
+            <ul className="list-disc pl-5 space-y-1 text-foreground">
+              <li>The Zero To Funded Course</li>
+              <li>The Photon Service</li>
+              <li>130+ Video Lessons</li>
+              <li>50+ Hours of Training</li>
+              <li>24/7 Support</li>
+            </ul>
           </div>
         </div>
 
@@ -101,170 +109,129 @@ export default function CheckoutPage() {
                   <span className="text-foreground">Subtotal:</span>
                   <span className="text-foreground">$112 GBP</span>
                 </div>
-
-                <div className="flex justify-between items-center mt-2">
-                  <span className="text-foreground">Discount:</span>
-                  <div className="flex items-center gap-2">
-                    <input
-                      type="text"
-                      placeholder="Enter code"
-                      className="bg-black text-white border border-gray-300 rounded-md px-2 py-1 text-sm w-32"
-                    />
-                    <Button
-                      type="button"
-                      className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                    >
-                      Apply
-                    </Button>
-                  </div>
-                </div>
-
-                <div className="flex justify-between font-semibold mt-4 pt-4 border-t border-border">
-                  <span className="text-foreground">Due Now:</span>
-                  <span className="text-foreground">$112 GBP</span>
-                </div>
               </div>
             </div>
 
-            {/* FORM */}
-            <div className="space-y-4">
-              <Input
-                id="email"
-                type="email"
-                placeholder="Email Address"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-              />
-              <Input
-                id="name"
-                placeholder="Full Name"
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-              />
-              <Input
-                id="address1"
-                placeholder="Address Line 1"
-                value={formData.address1}
-                onChange={(e) =>
-                  setFormData({ ...formData, address1: e.target.value })
-                }
-              />
-              <Input
-                id="city"
-                placeholder="City"
-                value={formData.city}
-                onChange={(e) =>
-                  setFormData({ ...formData, city: e.target.value })
-                }
-              />
-
-              <div className="grid grid-cols-2 gap-4">
-                <Select
-                  value={formData.state}
-                  onValueChange={(val) => setFormData({ ...formData, state: val })}
-                >
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select state" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="AL">Alabama</SelectItem>
-                    <SelectItem value="AK">Alaska</SelectItem>
-                    <SelectItem value="CA">California</SelectItem>
-                  </SelectContent>
-                </Select>
-
+            <form className="space-y-4">
+              {/* Email Verification Section */}
+              <div className="relative">
                 <Input
-                  id="zip"
-                  placeholder="Zip/Postal Code"
-                  value={formData.zip}
-                  onChange={(e) =>
-                    setFormData({ ...formData, zip: e.target.value })
-                  }
+                  type="email"
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    setIsEmailEntered(!!e.target.value);
+                    setIsEmailVerified(false);
+                    setPin("");
+                  }}
+                  className={isEmailVerified ? "pr-10 border-green-500" : ""}
                 />
+                {isEmailVerified && (
+                  <Check className="absolute right-3 top-1/2 -translate-y-1/2 text-green-500" />
+                )}
               </div>
 
-              {/* Show button or payment method based on form completion */}
-              {!isFormComplete ? (
-                <Button
-                  type="button"
-                  onClick={handleContinue}
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                >
-                  Continue to Payment
-                </Button>
-              ) : (
-                <>
-                  {/* Payment Method Section */}
-                  <div className="space-y-4 pt-4 border-t border-border">
-                    <div className="font-semibold text-foreground">
-                      Payment Method
-                    </div>
-                    <RadioGroup
-                      value={paymentMethod}
-                      onValueChange={setPaymentMethod}
-                    >
-                      <div className="flex items-center space-x-2 border border-border rounded-md p-3">
-                        <RadioGroupItem value="card" id="card" />
-                        <Label htmlFor="card">Card</Label>
-                      </div>
-                      <div className="flex items-center space-x-2 border border-border rounded-md p-3 mt-2">
-                        <RadioGroupItem value="slip" id="slip" />
-                        <Label htmlFor="slip">Upload Slip</Label>
-                      </div>
-                    </RadioGroup>
-                  </div>
-
-                  {/* Upload slip UI */}
-                  {paymentMethod === "slip" && (
-                    <div className="space-y-4">
-                      <div>
-                        <Label>Upload Bank Payment Slip</Label>
-                        <Input type="file" />
-                      </div>
-                      <div className="bg-muted p-4 rounded-md">
-                        <p className="font-semibold mb-2">Bank Details:</p>
-                        <p>Account Name: Trading Edge Academy</p>
-                        <p>Bank: Commercial Bank</p>
-                        <p>Acc No: 123456789</p>
-                        <p>Branch: Colombo 03</p>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Agreement checkboxes */}
-                  <div className="space-y-2 pt-4">
-                    <div className="flex items-center space-x-2">
-                      <Checkbox id="subscribe" />
-                      <Label htmlFor="subscribe" className="text-sm">
-                        Subscribe to our email list.
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Checkbox id="terms" />
-                      <Label htmlFor="terms" className="text-sm">
-                        I agree to the terms and conditions.
-                      </Label>
-                    </div>
-                  </div>
-
-                  {/* Submit buttons */}
-                  {paymentMethod === "card" && <PayHereButton />}
-
-                  {paymentMethod === "slip" && (
-                    <Button
-                      type="submit"
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                    >
-                      Confirm Bank Payment
-                    </Button>
-                  )}
-                </>
+              {isEmailEntered && !isEmailVerified && (
+                <div className="flex items-center space-x-2">
+                  <Input
+                    type="text"
+                    placeholder="Pin Number"
+                    value={pin}
+                    onChange={(e) => setPin(e.target.value)}
+                  />
+                  <Button onClick={handleSendCode} type="button">
+                    Get
+                  </Button>
+                  <Button onClick={handleVerify} type="button">
+                    Verify
+                  </Button>
+                </div>
               )}
-            </div>
+
+              {/* Fields disabled until verified */}
+              <fieldset
+                disabled={!isEmailVerified}
+                className={!isEmailVerified ? "opacity-50" : ""}
+              >
+                <Input id="name" placeholder="Full Name" className="mb-4" />
+                <Input
+                  id="address1"
+                  placeholder="Address Line 1"
+                  className="mb-4"
+                />
+                <Input id="city" placeholder="City" className="mb-4" />
+
+                <div className="grid grid-cols-2 gap-4">
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select state" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="AL">Alabama</SelectItem>
+                      <SelectItem value="AK">Alaska</SelectItem>
+                      <SelectItem value="CA">California</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <Input id="zip" placeholder="Zip/Postal Code" />
+                </div>
+
+                {/* Payment Method */}
+                <div className="space-y-4 pt-4 border-t border-border">
+                  <div className="font-semibold text-foreground">
+                    Payment Method
+                  </div>
+                  <RadioGroup
+                    value={paymentMethod}
+                    onValueChange={setPaymentMethod}
+                  >
+                    <div className="flex items-center space-x-2 border border-border rounded-md p-3">
+                      <RadioGroupItem value="card" id="card" />
+                      <Label htmlFor="card">Card</Label>
+                    </div>
+                    <div className="flex items-center space-x-2 border border-border rounded-md p-3 mt-2">
+                      <RadioGroupItem value="slip" id="slip" />
+                      <Label htmlFor="slip">Upload Slip</Label>
+                    </div>
+                  </RadioGroup>
+                </div>
+
+                {paymentMethod === "slip" && (
+                  <div className="space-y-4">
+                    <Label>Upload Bank Payment Slip</Label>
+                    <Input type="file" onChange={handleSlipUpload} />
+                    <div className="bg-muted p-4 rounded-md">
+                      <p className="font-semibold mb-2">Bank Details:</p>
+                      <p>Account Name: Trading Edge Academy</p>
+                      <p>Bank: Commercial Bank</p>
+                      <p>Acc No: 123456789</p>
+                      <p>Branch: Colombo 03</p>
+                    </div>
+                  </div>
+                )}
+
+                <div className="space-y-2 pt-4">
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="subscribe" />
+                    <Label htmlFor="subscribe" className="text-sm">
+                      Subscribe to our email list.
+                    </Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Checkbox id="terms" />
+                    <Label htmlFor="terms" className="text-sm">
+                      I agree to the terms and conditions.
+                    </Label>
+                  </div>
+                </div>
+
+                {paymentMethod === "card" && <PayHereButton />}
+
+                {paymentMethod === "slip" && (
+                  <Button className="w-full">Confirm Bank Payment</Button>
+                )}
+              </fieldset>
+            </form>
           </div>
         </Card>
       </div>
