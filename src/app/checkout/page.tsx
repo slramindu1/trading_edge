@@ -16,7 +16,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { PayHereButton } from "@/components/global/PaymentForm";
 
 export default function CheckoutPage() {
   const [email, setEmail] = useState("");
@@ -237,7 +236,7 @@ export default function CheckoutPage() {
                   </div>
                 </div>
                 <div className="mt-4">
-                  {paymentMethod === "card" && <PayHereButton />}
+              
                 </div>
 
                 {paymentMethod === "slip" && (
