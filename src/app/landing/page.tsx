@@ -298,18 +298,6 @@ const HomePage = () => {
             </p>
           </div>
         </Container>
-       <Wrapper className="flex flex-col items-center justify-center py-12 relative">
-  <Container className="flex flex-col items-center justify-center">
-    <div className="max-w-md mx-auto text-center">
-      <SectionBadge title="Our Membership" />
-      <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-        What&apos;s Included In The Membership
-      </h2>
-      <p className="text-muted-foreground mt-6">
-        Learn More About Our Membership
-      </p>
-    </div>
-  </Container>
 
         <Container>
           <div className="absolute inset-0 opacity-20 z-0"></div>
