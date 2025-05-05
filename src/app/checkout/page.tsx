@@ -22,9 +22,9 @@ export default function CheckoutPage() {
   const [email, setEmail] = useState("");
   const [isEmailEntered, setIsEmailEntered] = useState(false);
   const [isEmailVerified, setIsEmailVerified] = useState(false);
+  const [isCodeSent, setIsCodeSent] = useState(false);
   const [pin, setPin] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
-
   const [country, setCountry] = useState("United States");
 
   const handleSendCode = async () => {
@@ -38,6 +38,7 @@ export default function CheckoutPage() {
       const data = await res.json();
       if (data.success) {
         alert("Verification code sent to your email.");
+        setIsCodeSent(true);
       } else {
         alert("Failed to send code.");
       }
@@ -53,7 +54,7 @@ export default function CheckoutPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, pin }),
       });
-  
+
       const data = await res.json();
       if (data.success) {
         setIsEmailVerified(true);
@@ -64,7 +65,6 @@ export default function CheckoutPage() {
       alert("Verification failed.");
     }
   };
-  
 
   function handleSlipUpload(event: ChangeEvent<HTMLInputElement>): void {
     throw new Error("Function not implemented.");
@@ -134,6 +134,7 @@ export default function CheckoutPage() {
                     setEmail(e.target.value);
                     setIsEmailEntered(!!e.target.value);
                     setIsEmailVerified(false);
+                    setIsCodeSent(false);
                     setPin("");
                   }}
                   className={isEmailVerified ? "pr-10 border-green-500" : ""}
@@ -151,11 +152,11 @@ export default function CheckoutPage() {
                     value={pin}
                     onChange={(e) => setPin(e.target.value)}
                   />
-                  <Button onClick={handleSendCode} type="button">
-                    Get
-                  </Button>
-                  <Button onClick={handleVerify} type="button">
-                    Verify
+                  <Button
+                    onClick={isCodeSent ? handleVerify : handleSendCode}
+                    type="button"
+                  >
+                    {isCodeSent ? "Verify" : "Get"}
                   </Button>
                 </div>
               )}
@@ -235,7 +236,9 @@ export default function CheckoutPage() {
                     </Label>
                   </div>
                 </div>
-                <div className="mt-4">{paymentMethod === "card" && <PayHereButton />}</div>
+                <div className="mt-4">
+                  {paymentMethod === "card" && <PayHereButton />}
+                </div>
 
                 {paymentMethod === "slip" && (
                   <Button className="w-full">Confirm Bank Payment</Button>
