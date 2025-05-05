@@ -2,8 +2,6 @@ import { Footer, Navbar } from "@/components";
 import { SITE_CONFIG } from "@/config";
 import { cn } from "@/lib/utils";
 import "../styles/globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
 import { Inter } from "next/font/google";
 import Script from "next/script"; // ✅ Import Next.js Script component
 
@@ -24,9 +22,7 @@ export default function RootLayout({
           font.className
         )}
       >
-        <ClerkProvider appearance={{ baseTheme: dark }}>
-          {children}
-        </ClerkProvider>
+       {children}
       </body>
     </html>
   );
