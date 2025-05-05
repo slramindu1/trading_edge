@@ -114,11 +114,11 @@ export default function CheckoutPage() {
         <Card className="p-6 bg-card text-card-foreground">
           <div className="space-y-6">
             <div>
-              <h2 className="text-2xl font-bold text-foreground">$112 GBP</h2>
+              <h2 className="text-2xl font-bold text-foreground">$117 GBP</h2>
               <div className="border-t border-border mt-4 pt-4">
                 <div className="flex justify-between">
                   <span className="text-foreground">Subtotal:</span>
-                  <span className="text-foreground">$112 GBP</span>
+                  <span className="text-foreground">$117 GBP</span>
                 </div>
               </div>
             </div>

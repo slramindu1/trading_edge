@@ -169,7 +169,7 @@ export const pricingCards = [
     {
         title: "Annual ",
         description: "Perfect for trying out plura",
-        price: "100$/yr",
+        price: "117$/yr",
         duration: "",
         highlight: "Key features",
         buttonText: "Get Started",
