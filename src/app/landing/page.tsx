@@ -335,7 +335,7 @@ const HomePage = () => {
                   Our complete framework, with step-by-step guidance, has been
                   developed to align with all market types including Forex,
                   Crypto, Indices, and Futures, eliminating all the noise and
-                  errors you've learned so far. Through this, we present a
+                  errors you&apos;sve learned so far. Through this, we present a
                   powerful and proven approach.
                 </p>
 
