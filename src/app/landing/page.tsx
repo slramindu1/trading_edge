@@ -292,245 +292,196 @@ const HomePage = () => {
 
       {/* {Whats Incldued Membership} */}
        <Wrapper className="flex flex-col items-center justify-center py-12 relative">
-        {/* <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div> */}
-        <Container className="flex flex-col items-center justify-center">
-          <div className="max-w-md mx-auto text-center">
-            <SectionBadge title="Our Membership" />
-            <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-              What&apos;s Included In The Membership
-            </h2>
-            <p className="text-muted-foreground mt-6">
-              Learn More About Our Membership
+  <Container className="flex flex-col items-center justify-center">
+    <div className="max-w-md mx-auto text-center">
+      <SectionBadge title="Our Membership" />
+      <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+        What&apos;s Included In The Membership
+      </h2>
+      <p className="text-muted-foreground mt-6">
+        Learn More About Our Membership
+      </p>
+    </div>
+  </Container>
+
+  <Container>
+    <div className="absolute inset-0 opacity-20 z-0"></div>
+
+    <div className="container mx-auto px-4 py-8 relative z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="relative z-10">
+          <Image
+            src="/assets/poster1.png"
+            alt="The Fanatic Way Course Preview"
+            width={600}
+            height={600}
+            className="rounded-lg w-full"
+          />
+        </div>
+
+        <div className="space-y-6">
+          <h1 className="text-6xl md:text-3xl font-bold mb-2">
+            Trading Edge Course
+          </h1>
+          <p className="text-xl text-primary">
+            A NO BS Trading Course! No Guessing, 12 modules, 180 comprehensive lessons.
+          </p>
+          <p className="text-lg">
+            Our complete framework, with step-by-step guidance, has been developed to align
+            with all market types including Forex, Crypto, Indices, and Futures, eliminating
+            all the noise and errors you&apos;ve learned so far. Through this, we present a
+            powerful and proven approach.
+          </p>
+
+          <div className="space-y-3">
+            <h3 className="text-xl font-bold">Results:</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                <span>
+                  Complete clarity and confidence of what you look for when you sit on your charts.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                <span>
+                  Obtain incredible discipline to stop overtrading and hesitating.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                <span>
+                  Learn exactly when to wait for the right trades, enter, manage, and exit trades.
+                </span>
+              </li>
+            </ul>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
+                ENROLL NOW
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="space-y-6">
+          <h1 className="text-4xl md:text-3xl font-bold mb-2">
+            Trading Edge Flix
+          </h1>
+          <p className="text-xl text-primary">
+            40+ Hours Of Content, Unique Dashboard
+          </p>
+          <p className="text-lg">
+            Unlock your personalized approach with a unique dashboard to view the continuously
+            updated additional 40+ hours of content.
+          </p>
+
+          <div className="space-y-3">
+            <p className="text-lg">
+              Learn what it takes to become a consistently profitable trader in the long term by
+              adapting to the ever-changing market conditions through the analysis and markups of
+              experienced traders.
             </p>
-          </div>
-        </Container>
 
-        <Container>
-          <div className="absolute inset-0 opacity-20 z-0"></div>
-          {/* <div className="absolute top-0 left-0 right-0 h-[500px] gradient opacity-10 blur-[100px] z-0"></div> */}
+            <h3 className="text-xl font-bold">Key Benefits:</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                <span>
+                  Experience how your profitable strategies work in real-time through live trading.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                <span>Review your performance.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                <span>Learn how to correctly put all the strategies together.</span>
+              </li>
+            </ul>
 
-          <div className="container mx-auto px-4 py-8 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Left column - Course preview */}
-              <div className="relative z-10">
-                <Image
-                  src="/assets/poster1.png"
-                  alt="The Fanatic Way Course Preview"
-                  width={600}
-                  height={600}
-                  className="rounded-lg w-full"
-                />
-              </div>
-
-              {/* Right column - Course info */}
-              <div className="space-y-6">
-                <h1 className="text-6xl md:text-3xl font-bold mb-2">
-                  Trading Edge Course
-                </h1>
-                <p className="text-xl text-primary">
-                  A NO BS Trading Course! , No Guessing , 12 modules, 180
-                  comprehensive lessons.
-                </p>
-                <p className="text-lg">
-                  Our complete framework, with step-by-step guidance, has been
-                  developed to align with all market types including Forex,
-                  Crypto, Indices, and Futures, eliminating all the noise and
-                  errors you&apos;sve learned so far. Through this, we present a
-                  powerful and proven approach.
-                </p>
-
-                <div className="space-y-3">
-                  <h3 className="text-xl font-bold">Results:</h3>
-
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                      <span>
-                        Complete clarity and confidence of what you look for
-                        when you sit on your charts.
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                      <span>
-                        Obtain incredible discipline to stop overtrading and
-                        hesitating.
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                      <span>
-                        Learn exactly Waiting for the right trades, enter,
-                        manage and exit trades.
-                      </span>
-                    </li>
-                  </ul>
-
-                  <div className="flex flex-col sm:flex-row gap-4 mt-4 ">
-                    {/* <Button variant="outline" size="lg" className="group">
-                      <CirclePlay className="mr-2 h-5 w-5 group-hover:text-primary transition-colors" />
-                      SEE WHAT&apos;S INSIDE
-                    </Button> */}
-                    <div className="flex ">
-                      <Button
-                        size="lg"
-                        className="bg-primary hover:bg-primary/90"
-                      >
-                        ENROLL NOW
-                      </Button>
-                     
-                      {/* <Button className="mt-6" asChild>
-                        <Link href="/contact">Enroll Now</Link>
-                      </Button> */}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Left column - Course info */}
-              <div className="space-y-6">
-                <h1 className="text-4xl md:text-3xl font-bold mb-2">
-                  Trading Edge Flix
-                </h1>
-                <p className="text-xl text-primary">
-                  40+ Hours Of Content , Unique Dashboard
-                </p>
-                <p className="text-lg">
-                  Unlock your personalized approach with a unique dashboard to
-                  view the continuously updated additional 40+ hours of content
-                </p>
-
-                <div className="space-y-3">
-                  <p className="text-lg">
-                    Learn what it takes to become a consistently profitable
-                    trader in the long term by adapting to the ever-changing
-                    market conditions through the analysis and markups of
-                    experienced traders.
-                  </p>
-
-                  <h3 className="text-xl font-bold">Key Benefits:</h3>
-
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                      <span>
-                        Experience how your profitable strategies work in
-                        real-time through live trading
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                      <span>Review your performance</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                      <span>
-                        Learn how to correctly put all the strategies."
-                      </span>
-                    </li>
-                  </ul>
-
-                  <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                    {/* <Button variant="outline" size="lg" className="group">
-                      <CirclePlay className="mr-2 h-5 w-5 group-hover:text-primary transition-colors" />
-                      SEE WHAT&apos;S INSIDE
-                    </Button> */}
-                    <Button
-                      size="lg"
-                      className="bg-primary hover:bg-primary/90"
-                    >
-                      ENROLL NOW!
-                    </Button>
-                  </div>
-                </div>
-              </div>
-              {/* Right column - Course preview */}
-              <div className="relative z-10">
-                <Image
-                  src="/assets/poster1.png"
-                  alt="The Fanatic Way Course Preview"
-                  width={600}
-                  height={600}
-                  className="rounded-lg w-full"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Left column - Course preview */}
-              <div className="relative z-10">
-                <Image
-                  src="/assets/poster1.png"
-                  alt="The Fanatic Way Course Preview"
-                  width={600}
-                  height={600}
-                  className="rounded-lg w-full"
-                />
-              </div>
-
-              {/* Right column - Course info */}
-              <div className="space-y-6">
-                <h1 className="text-4xl md:text-3xl font-bold mb-2 ">
-                  Trading Edge Community
-                </h1>
-                <p className="text-xl text-primary">
-                  40+ Hours Of Content , Unique Dashboard
-                </p>
-                <p className="text-lg">
-                  As part of a Trading Edge membership, you will gain access to
-                  our team, our Daily Session Analysis/Markups/Recaps and access
-                  to all the currency pairs, indices, and Daily Breakdown that
-                  we all trade.
-                </p>
-
-                <div className="space-y-3">
-                  <p className="text-lg">
-                    You will have the opportunity to interact directly with our
-                    team of experienced traders, meet like-minded members at
-                    various stages of their trading journey, learn about their
-                    insights and the strategies they use, and be part of their
-                    community. All of this will take place through Discord!
-                  </p>
-
-                  <h3 className="text-xl font-bold  ">Benefits:</h3>
-
-                  <ul className="space-y-2 ">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                      <span>Share ideas with other successful traders.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                      <span>
-                        Access Daily market analysis and Trade Breakdown
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                      <span>Receive continuous 1:1 coaching support.</span>
-                    </li>
-                  </ul>
-
-                  <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                    {/* <Button variant="outline" size="lg" className="group">
-                      <CirclePlay className="mr-2 h-5 w-5 group-hover:text-primary transition-colors" />
-                      SEE WHAT&apos;S INSIDE
-                    </Button> */}
-                    <Button
-                      size="lg"
-                      className="bg-primary hover:bg-primary/90"
-                    >
-                      ENROLL NOW!
-                    </Button>
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
+                ENROLL NOW!
+              </Button>
             </div>
           </div>
-        </Container>
-      </Wrapper>
+        </div>
+
+        <div className="relative z-10">
+          <Image
+            src="/assets/poster1.png"
+            alt="The Fanatic Way Course Preview"
+            width={600}
+            height={600}
+            className="rounded-lg w-full"
+          />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="relative z-10">
+          <Image
+            src="/assets/poster1.png"
+            alt="The Fanatic Way Course Preview"
+            width={600}
+            height={600}
+            className="rounded-lg w-full"
+          />
+        </div>
+
+        <div className="space-y-6">
+          <h1 className="text-4xl md:text-3xl font-bold mb-2">
+            Trading Edge Community
+          </h1>
+          <p className="text-xl text-primary">
+            40+ Hours Of Content, Unique Dashboard
+          </p>
+          <p className="text-lg">
+            As part of a Trading Edge membership, you will gain access to our team, our Daily
+            Session Analysis/Markups/Recaps and access to all the currency pairs, indices, and
+            Daily Breakdown that we all trade.
+          </p>
+
+          <div className="space-y-3">
+            <p className="text-lg">
+              You will have the opportunity to interact directly with our team of experienced
+              traders, meet like-minded members at various stages of their trading journey,
+              learn about their insights and the strategies they use, and be part of their
+              community. All of this will take place through Discord!
+            </p>
+
+            <h3 className="text-xl font-bold">Benefits:</h3>
+            <ul className="space-y-2">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                <span>Share ideas with other successful traders.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                <span>Access Daily market analysis and Trade Breakdown.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                <span>Receive continuous 1:1 coaching support.</span>
+              </li>
+            </ul>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
+                ENROLL NOW!
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Wrapper>
+
 
       {/* Course Curiculam */}
       <Wrapper className="flex flex-col items-center justify-center py-12 relative">
