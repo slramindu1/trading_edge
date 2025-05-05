@@ -24,7 +24,14 @@ export default function CheckoutPage() {
   const [isCodeSent, setIsCodeSent] = useState(false);
   const [pin, setPin] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
-  const [country, setCountry] = useState("United States");
+  const [country, setCountry] = useState("Sri Lanka");
+
+  // Form field states
+  const [fullName, setFullName] = useState("");
+  const [address1, setAddress1] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [zip, setZip] = useState("");
 
   const handleSendCode = async () => {
     try {
@@ -65,6 +72,44 @@ export default function CheckoutPage() {
     }
   };
 
+  const handlePayWithCard = () => {
+    if (!email || !fullName || !address1 || !city) {
+      alert("Please fill all required fields.");
+      return;
+    }
+
+    const nameParts = fullName.trim().split(" ");
+    const firstName = nameParts[0];
+    const lastName = nameParts.slice(1).join(" ") || "User";
+
+    const payment = {
+      sandbox: true,
+      merchant_id: "1224246",
+      return_url: "https://your-site.com/checkout-success",
+      cancel_url: "https://your-site.com/checkout-cancel",
+      notify_url: "https://your-site.com/notify",
+      order_id: "ORDER_" + Date.now(),
+      items: "Trading Edge Pro Membership",
+      amount: "117.00",
+      currency: "USD",
+      first_name: firstName,
+      last_name: lastName,
+      email: email,
+      phone: "0771234567",
+      address: address1,
+      city: city,
+      country: country,
+    };
+
+    // @ts-ignore
+    if (typeof payhere !== "undefined") {
+      // @ts-ignore
+      payhere.startPayment(payment);
+    } else {
+      alert("PayHere script not loaded.");
+    }
+  };
+
   function handleSlipUpload(event: ChangeEvent<HTMLInputElement>): void {
     throw new Error("Function not implemented.");
   }
@@ -91,9 +136,7 @@ export default function CheckoutPage() {
             <p className="text-foreground">One-time payment = 1 Year Access</p>
 
             <div className="flex items-center gap-2">
-              <p className="text-foreground">
-                All future course updates included
-              </p>
+              <p className="text-foreground">All future course updates included</p>
               <div className="h-5 w-5 rounded-full bg-primary flex items-center justify-center">
                 <Check className="h-3 w-3 text-primary-foreground" />
               </div>
@@ -113,11 +156,11 @@ export default function CheckoutPage() {
         <Card className="p-6 bg-card text-card-foreground">
           <div className="space-y-6">
             <div>
-              <h2 className="text-2xl font-bold text-foreground">$117 GBP</h2>
+              <h2 className="text-2xl font-bold text-foreground">£117 GBP</h2>
               <div className="border-t border-border mt-4 pt-4">
                 <div className="flex justify-between">
                   <span className="text-foreground">Subtotal:</span>
-                  <span className="text-foreground">$117 GBP</span>
+                  <span className="text-foreground">£117 GBP</span>
                 </div>
               </div>
             </div>
@@ -165,16 +208,30 @@ export default function CheckoutPage() {
                 disabled={!isEmailVerified}
                 className={!isEmailVerified ? "opacity-50" : ""}
               >
-                <Input id="name" placeholder="Full Name" className="mb-4" />
+                <Input
+                  id="name"
+                  placeholder="Full Name"
+                  className="mb-4"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                />
                 <Input
                   id="address1"
                   placeholder="Address Line 1"
                   className="mb-4"
+                  value={address1}
+                  onChange={(e) => setAddress1(e.target.value)}
                 />
-                <Input id="city" placeholder="City" className="mb-4" />
+                <Input
+                  id="city"
+                  placeholder="City"
+                  className="mb-4"
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
+                />
 
                 <div className="grid grid-cols-2 gap-4">
-                  <Select>
+                  <Select onValueChange={setState}>
                     <SelectTrigger>
                       <SelectValue placeholder="Select state" />
                     </SelectTrigger>
@@ -184,7 +241,12 @@ export default function CheckoutPage() {
                       <SelectItem value="CA">California</SelectItem>
                     </SelectContent>
                   </Select>
-                  <Input id="zip" placeholder="Zip/Postal Code" />
+                  <Input
+                    id="zip"
+                    placeholder="Zip/Postal Code"
+                    value={zip}
+                    onChange={(e) => setZip(e.target.value)}
+                  />
                 </div>
 
                 {/* Payment Method */}
@@ -235,13 +297,19 @@ export default function CheckoutPage() {
                     </Label>
                   </div>
                 </div>
-                <div className="mt-4">
-              
-                </div>
 
-                {paymentMethod === "slip" && (
-                  <Button className="w-full">Confirm Bank Payment</Button>
-                )}
+                <div className="mt-4">
+                  {paymentMethod === "card" && (
+                    <Button className="w-full" type="button" onClick={handlePayWithCard}>
+                      Pay With Card
+                    </Button>
+                  )}
+                  {paymentMethod === "slip" && (
+                    <Button className="w-full" type="button">
+                      Confirm Bank Payment
+                    </Button>
+                  )}
+                </div>
               </fieldset>
             </form>
           </div>
