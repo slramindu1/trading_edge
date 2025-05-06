@@ -79,7 +79,7 @@ export default function CheckoutPage() {
       const data = await res.json();
       if (data.success) {
         setIsEmailVerified(true);
-        toast.success("Email address verified successfully."); // ✅ මෙය එකතු කරන්න
+        toast.success("Email address verified successfully.");
       } else {
         toast.error("Invalid or expired code.");
       }
@@ -103,7 +103,7 @@ export default function CheckoutPage() {
         setDiscountPercent(data.discount);
         const discounted = 117 - (117 * data.discount) / 100;
         setTotalAmount(Number(discounted.toFixed(2)));
-        setIsCouponApplied(true); // coupon applied වුනා කියලා mark කරන්න
+        setIsCouponApplied(true);
         toast.success(`Coupon Applied! You saved ${data.discount}%`);
       } else {
         toast.error("Invalid or expired coupon code.");
@@ -158,10 +158,10 @@ export default function CheckoutPage() {
   return (
     <>
       <ToastContainer position="top-right" autoClose={4000} />
-      <div className="min-h-screen p-4 md:p-8">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
-          {/* Product Info */}
-          <div className="space-y-6 flex flex-col">
+      <div className="min-h-screen p-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-20">
+          {/* Product Info - Mobile first */}
+          <div className="space-y-6 flex flex-col order-2 md:order-1">
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/assets/mokup.avif"
@@ -169,11 +169,12 @@ export default function CheckoutPage() {
                 width={800}
                 height={400}
                 className="rounded-lg object-cover w-full"
+                priority
               />
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-3xl font-bold text-foreground">
+              <h1 className="text-2xl font-bold text-foreground md:text-3xl">
                 Trading Edge 1 Year Pro Membership
               </h1>
               <p className="text-foreground">
@@ -199,11 +200,11 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          {/* Checkout Form */}
-          <Card className="p-6 bg-card text-card-foreground">
+          {/* Checkout Form - Mobile first */}
+          <Card className="p-4 bg-card text-card-foreground order-2 md:order-2 md:p-6">
             <div className="space-y-6">
               <div>
-                <h2 className="text-4xl font-bold text-foreground">
+                <h2 className="text-3xl font-bold text-foreground md:text-4xl">
                   <span
                     className={`inline-block transition-all duration-500 ease-in-out ${
                       isCouponApplied ? "line-through text-white scale-90" : ""
@@ -251,20 +252,20 @@ export default function CheckoutPage() {
                   )}
 
                   {!isCouponApplied && (
-                    <div className="flex justify-between items-center mt-2">
+                    <div className="flex flex-col space-y-2 md:flex-row md:items-center md:space-y-0 md:space-x-2 mt-2">
                       <span className="text-foreground">Discount:</span>
-                      <div className="flex items-center gap-2">
-                        <input
+                      <div className="flex items-center gap-2 w-full">
+                        <Input
                           type="text"
                           placeholder="Enter code"
                           value={couponCode}
                           onChange={(e) => setCouponCode(e.target.value)}
-                          className="bg-black text-white border border-gray-300 rounded-md px-2 py-1 text-sm w-72 h-9"
+                          className="bg-black text-white border border-gray-300 rounded-md px-2 py-1 text-sm w-full h-9 md:w-72"
                         />
                         <Button
                           type="button"
                           onClick={handleApplyCoupon}
-                          className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                          className="bg-primary hover:bg-primary/90 text-primary-foreground whitespace-nowrap"
                         >
                           Apply
                         </Button>
@@ -296,7 +297,7 @@ export default function CheckoutPage() {
                 </div>
 
                 {isEmailEntered && !isEmailVerified && (
-                  <div className="flex items-center space-x-2">
+                  <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
                     <Input
                       type="text"
                       placeholder="Pin Number"
@@ -306,6 +307,7 @@ export default function CheckoutPage() {
                     <Button
                       onClick={isCodeSent ? handleVerify : handleSendCode}
                       type="button"
+                      className="w-full sm:w-auto"
                     >
                       {isCodeSent ? "Verify" : "Get"}
                     </Button>
@@ -320,7 +322,7 @@ export default function CheckoutPage() {
                   <Input
                     id="name"
                     placeholder="Full Name"
-                    className="mb-4 "
+                    className="mb-4"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                   />
@@ -339,7 +341,7 @@ export default function CheckoutPage() {
                     onChange={(e) => setCity(e.target.value)}
                   />
 
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <Select onValueChange={setState}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select state" />
