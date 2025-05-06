@@ -365,7 +365,7 @@ const HomePage = () => {
             </div>
 
             {/* Section 2 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-8">
               <div className="space-y-6">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
                   Trading Edge Flix
