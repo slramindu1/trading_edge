@@ -74,7 +74,7 @@ const Navbar = async () => {
                 Login
               </Link>
               <Link
-                href="#"
+                href="#pricing"
                 className={buttonVariants({
                   size: "sm",
                   className: "hidden md:flex",
