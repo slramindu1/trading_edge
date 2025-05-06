@@ -1,5 +1,6 @@
 import { Container, Icons } from "@/components";
 import { buttonVariants } from "@/components/ui/button";
+import Image from "next/image";
 
 import Link from "next/link";
 
@@ -11,7 +12,14 @@ const Navbar = async () => {
           <div className="flex items-start">
             <Link href="/" className="flex items-center gap-2">
               {/* <Icons.logo className="w-8 h-8" /> */}
-              <span className="text-lg font-medium">Trading Edge</span>
+              <Image
+                src="/logos/logo-white.png" // Path to your logo in the public folder
+                alt="Trading Edge Logo"
+                width={188} // Adjust width as needed
+                height={32} // Adjust height as needed
+                // Additional styling
+              />
+              {/* <span className="text-lg font-medium">Trading Edge</span> */}
             </Link>
           </div>
           <nav className="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
