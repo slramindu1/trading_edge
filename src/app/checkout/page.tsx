@@ -224,7 +224,9 @@ export default function CheckoutPage() {
 
                       <div className="flex justify-between items-center mt-2">
                         <span className="text-foreground">Discount:</span>
-                        <div className="flex items-center gap-2">
+
+                        {/* Wrap right-side elements and align right */}
+                        <div className="ml-auto flex items-center gap-2">
                           <span className="text-blue-500 font-semibold">
                             -{discountPercent}% ($
                             {((117 * discountPercent) / 100).toFixed(2)})
@@ -254,7 +256,8 @@ export default function CheckoutPage() {
                   {!isCouponApplied && (
                     <div className="flex flex-col space-y-2 md:flex-row md:items-center md:space-y-0 md:space-x-2 mt-2">
                       <span className="text-foreground">Discount:</span>
-                      <div className="flex items-center gap-2 w-full">
+                      {/* Wrap textbox + button in a right-aligned container */}
+                      <div className="ml-auto flex items-center gap-2 w-full md:justify-end">
                         <Input
                           type="text"
                           placeholder="Enter code"
