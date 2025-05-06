@@ -32,6 +32,9 @@ export default function CheckoutPage() {
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [zip, setZip] = useState("");
+  const [couponCode, setCouponCode] = useState("");
+  const [discountPercent, setDiscountPercent] = useState(0);
+  const [totalAmount, setTotalAmount] = useState(117);
 
   const handleSendCode = async () => {
     try {
@@ -69,6 +72,30 @@ export default function CheckoutPage() {
       }
     } catch (err) {
       alert("Verification failed.");
+    }
+  };
+
+  const handleApplyCoupon = async () => {
+    if (!couponCode) return alert("Please enter a code");
+
+    try {
+      const res = await fetch("https://tradingedgefx.com/check-coupon.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ code: couponCode }),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        setDiscountPercent(data.discount);
+        const discounted = 117 - (117 * data.discount) / 100;
+        setTotalAmount(Number(discounted.toFixed(2)));
+        alert(`Coupon Applied! You saved ${data.discount}%`);
+      } else {
+        alert("Invalid or expired coupon code.");
+      }
+    } catch (error) {
+      alert("Server error. Try again later.");
     }
   };
 
@@ -136,7 +163,9 @@ export default function CheckoutPage() {
             <p className="text-foreground">One-time payment = 1 Year Access</p>
 
             <div className="flex items-center gap-2">
-              <p className="text-foreground">All future course updates included</p>
+              <p className="text-foreground">
+                All future course updates included
+              </p>
               <div className="h-5 w-5 rounded-full bg-primary flex items-center justify-center">
                 <Check className="h-3 w-3 text-primary-foreground" />
               </div>
@@ -156,13 +185,36 @@ export default function CheckoutPage() {
         <Card className="p-6 bg-card text-card-foreground">
           <div className="space-y-6">
             <div>
-              <h2 className="text-2xl font-bold text-foreground">£117 GBP</h2>
+              <h2 className="text-2xl font-bold text-foreground">$117 </h2>
               <div className="border-t border-border mt-4 pt-4">
                 <div className="flex justify-between">
                   <span className="text-foreground">Subtotal:</span>
-                  <span className="text-foreground">£117 GBP</span>
+                  <span className="text-foreground">$117 </span>
+                </div>
+                <div className="flex justify-between items-center mt-2">
+                  <span className="text-foreground">Discount:</span>
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="text"
+                      placeholder="Enter code"
+                      value={couponCode}
+                      onChange={(e) => setCouponCode(e.target.value)}
+                      className="bg-black text-white border border-gray-300 rounded-md px-2 py-1 text-sm w-32"
+                    />
+                    <Button
+                      type="button"
+                      onClick={handleApplyCoupon}
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    >
+                      Apply
+                    </Button>
+                  </div>
                 </div>
               </div>
+            </div>
+            <div className="flex justify-between font-semibold mt-4 pt-4 border-t border-border">
+              <span className="text-foreground">Due Now:</span>
+              <span className="text-foreground">${totalAmount}</span>
             </div>
 
             <form className="space-y-4">
@@ -300,7 +352,11 @@ export default function CheckoutPage() {
 
                 <div className="mt-4">
                   {paymentMethod === "card" && (
-                    <Button className="w-full" type="button" onClick={handlePayWithCard}>
+                    <Button
+                      className="w-full"
+                      type="button"
+                      onClick={handlePayWithCard}
+                    >
                       Pay With Card
                     </Button>
                   )}
