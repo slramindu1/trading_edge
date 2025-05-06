@@ -217,7 +217,7 @@ export default function CheckoutPage() {
               <span className="text-foreground">${totalAmount}</span>
             </div>
 
-            <form className="space-y-4">
+            <form className="space-y-4 text-white font-semibold">
               {/* Email Verification Section */}
               <div className="relative">
                 <Input
@@ -263,7 +263,7 @@ export default function CheckoutPage() {
                 <Input
                   id="name"
                   placeholder="Full Name"
-                  className="mb-4"
+                  className="mb-4 "
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
                 />
