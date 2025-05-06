@@ -235,7 +235,7 @@
                   <span className="text-foreground">${totalAmount}</span>
                 </div>
 
-                <form className="space-y-4 text-white font-semibold">
+                <form className="space-y-4 text-white">
                   {/* Email Verification Section */}
                   <div className="relative">
                     <Input
