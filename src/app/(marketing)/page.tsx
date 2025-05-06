@@ -162,7 +162,9 @@ const HomePage = () => {
           </div>
         </Container>
       </Wrapper> */}
-      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+
+      {/*Our Customers*/}
+      <Wrapper id="customers" className="flex flex-col items-center justify-center py-12 relative" >
         <div className="hidden md:block absolute -top-1/4 -left-1/3 w-72 h-72 bg-indigo-500 rounded-full blur-[10rem] -z-10"></div>
         <Container>
           <div className="max-w-md mx-auto text-start md:text-center">
@@ -243,7 +245,7 @@ const HomePage = () => {
       </Wrapper>
 
       {/* features */}
-      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+      <Wrapper id="features" className="flex flex-col items-center justify-center py-12 relative">
         <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-primary rounded-full blur-[10rem] -z-10"></div>
         <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-indigo-600 rounded-full blur-[10rem] -z-10"></div>
         <Container>
@@ -286,7 +288,7 @@ const HomePage = () => {
       </Wrapper>
 
       {/* {Whats Incldued Membership} */}
-      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+      <Wrapper id="membership" className="flex flex-col items-center justify-center py-12 relative">
         <Container className="flex flex-col items-center justify-center px-4">
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="Our Membership" />
@@ -480,7 +482,7 @@ const HomePage = () => {
       </Wrapper>
 
       {/* Course Curiculam */}
-      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+      <Wrapper id="curriculum" className="flex flex-col items-center justify-center py-12 relative">
         <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
         <Container className="flex flex-col items-center justify-center">
           <div className="max-w-md mx-auto text-center">
@@ -522,7 +524,7 @@ const HomePage = () => {
       </Wrapper>
 
       {/* {testimonails section 2} */}
-      <Wrapper>
+      <Wrapper id="results">
         <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
         <Container className="flex flex-col items-center justify-center">
           <div className="max-w-md mx-auto text-center">
@@ -569,7 +571,7 @@ const HomePage = () => {
       </Wrapper>
 
       {/* pricing */}
-      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+      <Wrapper id="pricing" className="flex flex-col items-center justify-center py-12 relative">
         <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
         <Container className="flex flex-col items-center justify-center">
           <div className="max-w-md mx-auto text-center">
@@ -636,7 +638,7 @@ const HomePage = () => {
       {/* testimonials before section*/}
 
       {/* FAQ Section */}
-      <Wrapper className="flex flex-col items-center justify-center relative">
+      <Wrapper id="faq" className="flex flex-col items-center justify-center relative">
         <Container>
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="FAQ" />

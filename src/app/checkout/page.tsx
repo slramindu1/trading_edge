@@ -126,9 +126,9 @@ export default function CheckoutPage() {
     const payment = {
       sandbox: true,
       merchant_id: "1224246",
-      return_url: "https://your-site.com/checkout-success",
-      cancel_url: "https://your-site.com/checkout-cancel",
-      notify_url: "https://your-site.com/notify",
+      return_url: "http://localhost:300/checkout-success",
+      cancel_url: "http://localhost:3000/checkout-cancel",
+      notify_url: "http://localhost:3000/notify",
       order_id: "ORDER_" + Date.now(),
       items: "Trading Edge Pro Membership",
       amount: "117.00",
