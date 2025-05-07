@@ -126,9 +126,9 @@ export default function CheckoutPage() {
     const payment = {
       sandbox: true,
       merchant_id: "1224246",
-      return_url: "http://localhost:300/checkout-success",
-      cancel_url: "http://localhost:3000/checkout-cancel",
-      notify_url: "http://localhost:3000/notify",
+      return_url: "https://your-site.com/checkout-success",
+      cancel_url: "https://your-site.com/checkout-cancel",
+      notify_url: "https://your-site.com/notify",
       order_id: "ORDER_" + Date.now(),
       items: "Trading Edge Pro Membership",
       amount: "117.00",
@@ -263,7 +263,7 @@ export default function CheckoutPage() {
                           placeholder="Enter code"
                           value={couponCode}
                           onChange={(e) => setCouponCode(e.target.value)}
-                          className="bg-black text-white border border-gray-300 rounded-md px-2 py-1 text-sm w-full h-9 md:w-72"
+                          className="bg-black text-white border  rounded-md px-2 py-1 text-sm w-full h-9 md:w-72"
                         />
                         <Button
                           type="button"
