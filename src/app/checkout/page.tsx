@@ -201,9 +201,7 @@ export default function CheckoutPage() {
         toast.success(
           "Bank slip uploaded successfully! "
         );
-        toast.success(
-      ccount Will Be Activated Soon.Please Wait    "Your A "
-        );
+        toast.success("Your Account Will Be Activated Soon. Please Wait");
       } else {
         toast.error(data.message || "Failed to upload bank slip");
       }
