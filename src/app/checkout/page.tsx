@@ -151,9 +151,65 @@ export default function CheckoutPage() {
     }
   };
 
-  function handleSlipUpload(event: ChangeEvent<HTMLInputElement>): void {
-    throw new Error("Function not implemented.");
-  }
+  // Add these state variables at the top of your component
+  const [isUploading, setIsUploading] = useState(false);
+  const [uploadSuccess, setUploadSuccess] = useState(false);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  
+
+  // Replace the existing handleSlipUpload function with this:
+  const handleSlipUpload = async (event: ChangeEvent<HTMLInputElement>) => {
+    if (!event.target.files || event.target.files.length === 0) return;
+
+    const file = event.target.files[0];
+    setSelectedFile(file);
+  };
+
+
+  const handleConfirmBankPayment = async () => {
+    if (!selectedFile) {
+      toast.error("Please select a bank slip to upload");
+      return;
+    }
+
+    if (!fullName || !email) {
+      toast.error("Please fill all required fields");
+      return;
+    }
+
+    setIsUploading(true);
+
+    try {
+      const formData = new FormData();
+      formData.append("slip", selectedFile);
+      formData.append("fullName", fullName);
+      formData.append("email", email);
+      formData.append("paymentDate", new Date().toISOString());
+
+      const response = await fetch(
+        "https://tradingedgefx.com/upload-slip.php",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        setUploadSuccess(true);
+        toast.success(
+          "Bank slip uploaded successfully! Your account will be activated soon."
+        );
+      } else {
+        toast.error(data.message || "Failed to upload bank slip");
+      }
+    } catch (error) {
+      toast.error("Error uploading bank slip");
+    } finally {
+      setIsUploading(false);
+    }
+  };
 
   return (
     <>
@@ -423,8 +479,17 @@ export default function CheckoutPage() {
                       </Button>
                     )}
                     {paymentMethod === "slip" && (
-                      <Button className="w-full" type="button">
-                        Confirm Bank Payment
+                      <Button
+                        className="w-full"
+                        type="button"
+                        onClick={handleConfirmBankPayment}
+                        disabled={isUploading || uploadSuccess}
+                      >
+                        {isUploading
+                          ? "Uploading..."
+                          : uploadSuccess
+                          ? "Uploaded Successfully"
+                          : "Confirm Bank Payment"}
                       </Button>
                     )}
                   </div>
