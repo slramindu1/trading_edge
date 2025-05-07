@@ -199,7 +199,10 @@ export default function CheckoutPage() {
       if (data.success) {
         setUploadSuccess(true);
         toast.success(
-          "Bank slip uploaded successfully! Your account will be activated soon."
+          "Bank slip uploaded successfully! "
+        );
+        toast.success(
+          "Your Account Will Be Activated Soon.Please Wait "
         );
       } else {
         toast.error(data.message || "Failed to upload bank slip");
@@ -406,9 +409,9 @@ export default function CheckoutPage() {
                         <SelectValue placeholder="Select state" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="AL">Alabama</SelectItem>
-                        <SelectItem value="AK">Alaska</SelectItem>
-                        <SelectItem value="CA">California</SelectItem>
+                        <SelectItem value="AL">Colombo</SelectItem>
+                        <SelectItem value="AK">Gampaha</SelectItem>
+                        <SelectItem value="CA">Other</SelectItem>
                       </SelectContent>
                     </Select>
                     <Input
