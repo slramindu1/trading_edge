@@ -201,7 +201,7 @@ export default function CheckoutPage() {
           </div>
 
           {/* Checkout Form - Mobile first */}
-          <Card className="p-4 bg-card text-card-foreground order-2 md:order-2 md:p-6">
+          <Card className="p-4 bg-card text-card-foreground order-2 md:order-2 md:p-6 border-blue-400">
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl font-bold text-foreground md:text-4xl">
@@ -257,7 +257,7 @@ export default function CheckoutPage() {
                     <div className="flex flex-col space-y-2 md:flex-row md:items-center md:space-y-0 md:space-x-2 mt-2">
                       <span className="text-foreground">Discount:</span>
                       {/* Wrap textbox + button in a right-aligned container */}
-                      <div className="ml-auto flex items-center gap-2 w-full md:justify-end">
+                      <div className="ml-auto flex items-center gap-2 w-full md:justify-end ">
                         <Input
                           type="text"
                           placeholder="Enter code"
