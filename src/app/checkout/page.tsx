@@ -50,7 +50,7 @@ export default function CheckoutPage() {
     }
 
     try {
-      const res = await fetch("https://tradingedgefx.com/send-code.php", {
+      const res = await fetch("https://lms.tradingedgefx.com/Landing_res/send-code.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -70,7 +70,7 @@ export default function CheckoutPage() {
 
   const handleVerify = async () => {
     try {
-      const res = await fetch("https://tradingedgefx.com/verify-code.php", {
+      const res = await fetch("https://lms.tradingedgefx.com/Landing_res/verify-code.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, pin }),
@@ -92,7 +92,7 @@ export default function CheckoutPage() {
     if (!couponCode) return toast.error("Please enter a code");
 
     try {
-      const res = await fetch("https://tradingedgefx.com/check-coupon.php", {
+      const res = await fetch("https://lms.tradingedgefx.com/Landing_res/check-coupon.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code: couponCode }),
@@ -187,7 +187,7 @@ export default function CheckoutPage() {
       formData.append("paymentDate", new Date().toISOString());
 
       const response = await fetch(
-        "https://tradingedgefx.com/upload-slip.php",
+        "https://lms.tradingedgefx.com/Landing_res/upload-slip.php",
         {
           method: "POST",
           body: formData,
