@@ -67,13 +67,12 @@ const Navbar = async () => {
           </nav>
           <div className="flex items-center gap-4">
             <>
-           <Link
-  href="https://lms.tradingedgefx.com/Login/Sign_in.php"
-  className={buttonVariants({ size: "sm", variant: "ghost" })}
->
-  Login
-</Link>
-
+          <Link
+                href="https://lms.tradingedgefx.com/Login/Sign_in.php"
+                className={buttonVariants({ size: "sm", variant: "ghost" })}
+              >
+                Login
+              </Link>
               </Link>
               <Link
                 href="#pricing"
