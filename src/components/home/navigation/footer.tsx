@@ -109,14 +109,14 @@ const Footer = () => {
           </div>
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <div className="">
-              <h3 className="text-base font-medium text-white">Resources</h3>
+              <h3 className="text-base font-medium text-white">Privacy</h3>
               <ul className="mt-4 text-sm text-muted-foreground">
                 <li className="mt-2">
                   <Link
                     href=""
                     className="hover:text-foreground transition-all duration-300"
                   >
-                    Blog
+                    Privacy Policy
                   </Link>
                 </li>
                 <li className="mt-2">
@@ -124,17 +124,17 @@ const Footer = () => {
                     href=""
                     className="hover:text-foreground transition-all duration-300"
                   >
-                    Case Studies
+                    Terms & Conditions
                   </Link>
                 </li>
-                <li className="mt-2">
+                {/* <li className="mt-2">
                   <Link
                     href=""
                     className="hover:text-foreground transition-all duration-300"
                   >
                     Support
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="mt-10 md:mt-0 flex flex-col">
