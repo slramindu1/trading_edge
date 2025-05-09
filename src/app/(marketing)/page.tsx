@@ -45,7 +45,6 @@ const HomePage = () => {
       {/* hero */}
       <Wrapper>
         <div className="absolute inset-0 dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10 h-[150vh]" />
-        <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
 
         <Container>
           <div className="flex flex-col items-center justify-center py-20 h-full">
@@ -121,7 +120,8 @@ const HomePage = () => {
           </div>
         </Container>
       </Wrapper>
-  {/* Testimonials*/}
+
+      {/* Testimonials*/}
       {/* <Wrapper className="flex flex-col items-center justify-center py-12 relative">
         <Container>
           <div className="max-w-md mx-auto text-start md:text-center">
@@ -156,14 +156,13 @@ const HomePage = () => {
           </div>
         </Container>
       </Wrapper> */}
-      
+
       {/*Our Customers*/}
       <Wrapper
         id="customers"
         className="flex flex-col items-center justify-center py-12 relative"
       >
-        <div className="hidden md:block absolute -top-1/4 -left-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
-        <div className="hidden md:block absolute bottom-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
+        <div className="hidden md:block absolute -top-1/4 -left-1/3 w-72 h-72 bg-indigo-500 rounded-full blur-[10rem] -z-10"></div>
         <Container>
           <div className="max-w-md mx-auto text-start md:text-center">
             <SectionBadge title="Our Customers" />
@@ -247,8 +246,8 @@ const HomePage = () => {
         id="features"
         className="flex flex-col items-center justify-center py-12 relative"
       >
-        <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
-        <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
+        <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-primary rounded-full blur-[10rem] -z-10"></div>
+        <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-indigo-600 rounded-full blur-[10rem] -z-10"></div>
         <Container>
           <div className="max-w-md mx-auto text-start md:text-center">
             <SectionBadge title="Features" />
@@ -293,7 +292,6 @@ const HomePage = () => {
         id="membership"
         className="flex flex-col items-center justify-center py-12 relative"
       >
-        <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
         <Container className="flex flex-col items-center justify-center px-4">
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="Our Membership" />
@@ -492,7 +490,6 @@ const HomePage = () => {
         className="flex flex-col items-center justify-center py-12 relative"
       >
         <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
-        <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
         <Container className="flex flex-col items-center justify-center">
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="Course Curiculam" />
@@ -514,6 +511,7 @@ const HomePage = () => {
                   className="flex flex-col items-start px-6 py-6 border border-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 bg-background"
                 >
                   <div className="flex items-center justify-center mb-2">
+                    {/* <perk.icon className="w-8 h-8" /> */}
                     <h2 className="text-primary text-base font-semibold">
                       {curiculam.heading}
                     </h2>
@@ -532,9 +530,8 @@ const HomePage = () => {
       </Wrapper>
 
       {/* {testimonails section 2} */}
-      <Wrapper id="results" className="relative">
+      <Wrapper id="results">
         <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
-        <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
         <Container className="flex flex-col items-center justify-center">
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="Our Result" />
@@ -546,7 +543,7 @@ const HomePage = () => {
             </p>
           </div>
         </Container>
-        
+
         <Container className="mt-16">
           <section className="use-automation-zoom-in py-10 px-4">
             <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
@@ -592,7 +589,6 @@ const HomePage = () => {
         className="flex flex-col items-center justify-center py-12 relative"
       >
         <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
-        <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
         <Container className="flex flex-col items-center justify-center">
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="Pricing" />
@@ -638,7 +634,7 @@ const HomePage = () => {
                   </CardContent>
                   <CardFooter className="mt-auto">
                     <Link
-                      href="/checkout"
+                      href="/checkout" // ← HERE: Redirects to the /checkout page
                       className={cn(
                         "w-full text-center text-primary-foreground bg-primary p-2 rounded-md text-sm font-medium",
                         card.title !== "Unlimited Saas" &&
@@ -655,12 +651,13 @@ const HomePage = () => {
         </Container>
       </Wrapper>
 
+      {/* testimonials before section*/}
+
       {/* FAQ Section */}
       <Wrapper
         id="faq"
         className="flex flex-col items-center justify-center relative"
       >
-        <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
         <Container>
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="FAQ" />
@@ -707,7 +704,6 @@ const HomePage = () => {
 
       {/* newsletter */}
       <Wrapper className="flex flex-col items-center justify-center py-12 relative">
-        <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
         <Container>
           <LampContainer>
             <div className="flex flex-col items-center justify-center relative w-full text-center">

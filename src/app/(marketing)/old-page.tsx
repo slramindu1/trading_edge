@@ -503,7 +503,6 @@ const HomePage = () => {
           </div>
         </Container>
         <Container>
-          
           <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-6">
               {curiculam.map((curiculam) => (
@@ -544,9 +543,8 @@ const HomePage = () => {
             </p>
           </div>
         </Container>
-        
+
         <Container className="mt-16">
-          
           <section className="use-automation-zoom-in py-10 px-4">
             <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
               {[
