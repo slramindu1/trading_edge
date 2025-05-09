@@ -77,16 +77,16 @@ export default function PrivacyPolicy() {
           <li>To protect the rights or property of Trading Edge</li>
         </ul>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Children’s Privacy</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">Children&rsquo;s Privacy</h2>
         <p className="mb-4">
-          Our service is not intended for individuals under the age of 13. If we learn we’ve collected data from a child
+          Our service is not intended for individuals under the age of 13. If we learn we&rsquo;ve collected data from a child
           under 13 without parental consent, we will delete it.
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">Changes to This Policy</h2>
         <p className="mb-4">
           We may update our Privacy Policy from time to time. Changes will be posted on this page with an updated
-          "Last Updated" date.
+          &quot;Last Updated&quot; date.
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">Contact Us</h2>
