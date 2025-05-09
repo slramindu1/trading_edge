@@ -569,9 +569,9 @@ const HomePage = () => {
                     fill
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-sm p-2 text-center">
+                  {/* <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-sm p-2 text-center">
                     Architecture Designer
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -612,9 +612,9 @@ const HomePage = () => {
                     fill
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-sm p-2 text-center">
-                    {/* Architecture Designer */}
-                  </div>
+                  {/* <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-sm p-2 text-center">
+                    Architecture Designer
+                  </div> */}
                 </div>
               </div>
             </div>
