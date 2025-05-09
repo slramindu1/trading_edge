@@ -1,4 +1,4 @@
-// pages/terms-and-conditions.js
+// src/app/privacy/terms-conditions/page.tsx
 import Head from "next/head";
 
 export default function TermsAndConditions() {
@@ -23,7 +23,7 @@ export default function TermsAndConditions() {
         <p className="mb-4">
           Trading Edge and/or its licensors own the intellectual property rights to the website and its material. You
           agree not to reproduce, duplicate, copy, sell, resell, or exploit any portion of the services without express
-          written permission. You also agree not to share Trading Edge's video links or community content.
+          written permission. You also agree not to share Trading Edge&apos;s video links or community content.
         </p>
         <p className="mb-4">
           By viewing or using the content on this site, you agree it is for general education. You will not hold anyone
