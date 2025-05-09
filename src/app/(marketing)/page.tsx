@@ -551,72 +551,38 @@ const HomePage = () => {
         </Container>
         <Container className="mt-16">
           <section className="use-automation-zoom-in py-10 px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Column 1 */}
-              <div className="flex flex-col gap-6">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg group">
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+              {[
+                "/assets/5.jpg",
+                "/assets/2.jpg",
+                "/assets/3.jpg",
+                "/assets/4.jpg",
+                "/assets/1.jpg",
+                "/assets/6.jpg",
+                "/assets/7.jpg",
+                "/assets/8.jpg",
+                "/assets/9.jpg",
+                "/assets/10.jpg",
+                "/assets/11.jpg",
+                "/assets/12.jpg",
+                "/assets/13.jpg",
+                "/assets/14.jpg",
+                "/assets/15.jpg",
+                "/assets/16.jpg",
+              ].map((src, index) => (
+                <div
+                  key={index}
+                  className="overflow-hidden rounded-2xl shadow-lg mb-4 break-inside-avoid group relative"
+                >
                   <Image
-                    src="/assets/5.jpg"
-                    alt="Teal modern building"
-                    fill
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                    src={src}
+                    alt={`Image ${index + 1}`}
+                    width={600}
+                    height={400}
+                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg group">
-                  <Image
-                    src="/assets/12.jpg"
-                    alt="Curved modern building"
-                    fill
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                  />
-                  {/* <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-sm p-2 text-center">
-                    Architecture Designer
-                  </div> */}
-                </div>
-              </div>
-
-              {/* Column 2 */}
-              <div className="flex flex-col gap-6">
-                <div className="relative aspect-[3/5] overflow-hidden rounded-2xl shadow-lg group">
-                  <Image
-                    src="/assets/13.jpg"
-                    alt="White apartment building with balconies"
-                    fill
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg group">
-                  <Image
-                    src="/assets/8.jpg"
-                    alt="Circular modern building"
-                    fill
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-              </div>
-
-              {/* Column 3 */}
-              <div className="flex flex-col gap-6">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg group">
-                  <Image
-                    src="/assets/3.jpg"
-                    alt="Tall modern building"
-                    fill
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg group">
-                  <Image
-                    src="/assets/9.jpg"
-                    alt="Distinctive architectural building"
-                    fill
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                  />
-                  {/* <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-sm p-2 text-center">
-                    Architecture Designer
-                  </div> */}
-                </div>
-              </div>
+              ))}
             </div>
           </section>
         </Container>
