@@ -20,7 +20,7 @@ import {
   reviews,
   faqs,
   curiculam,
-  testimonials,
+  galleryItems,
 } from "@/constants";
 import { cn } from "@/lib/utils";
 import {
@@ -164,7 +164,10 @@ const HomePage = () => {
       </Wrapper> */}
 
       {/*Our Customers*/}
-      <Wrapper id="customers" className="flex flex-col items-center justify-center py-12 relative" >
+      <Wrapper
+        id="customers"
+        className="flex flex-col items-center justify-center py-12 relative"
+      >
         <div className="hidden md:block absolute -top-1/4 -left-1/3 w-72 h-72 bg-indigo-500 rounded-full blur-[10rem] -z-10"></div>
         <Container>
           <div className="max-w-md mx-auto text-start md:text-center">
@@ -245,7 +248,10 @@ const HomePage = () => {
       </Wrapper>
 
       {/* features */}
-      <Wrapper id="features" className="flex flex-col items-center justify-center py-12 relative">
+      <Wrapper
+        id="features"
+        className="flex flex-col items-center justify-center py-12 relative"
+      >
         <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-primary rounded-full blur-[10rem] -z-10"></div>
         <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-indigo-600 rounded-full blur-[10rem] -z-10"></div>
         <Container>
@@ -288,7 +294,10 @@ const HomePage = () => {
       </Wrapper>
 
       {/* {Whats Incldued Membership} */}
-      <Wrapper id="membership" className="flex flex-col items-center justify-center py-12 relative">
+      <Wrapper
+        id="membership"
+        className="flex flex-col items-center justify-center py-12 relative"
+      >
         <Container className="flex flex-col items-center justify-center px-4">
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="Our Membership" />
@@ -482,7 +491,10 @@ const HomePage = () => {
       </Wrapper>
 
       {/* Course Curiculam */}
-      <Wrapper id="curriculum" className="flex flex-col items-center justify-center py-12 relative">
+      <Wrapper
+        id="curriculum"
+        className="flex flex-col items-center justify-center py-12 relative"
+      >
         <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
         <Container className="flex flex-col items-center justify-center">
           <div className="max-w-md mx-auto text-center">
@@ -538,40 +550,83 @@ const HomePage = () => {
           </div>
         </Container>
         <Container className="mt-16">
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-            {testimonials.map((t, i) => (
-              <div
-                key={i}
-                className="break-inside-avoid p-6 rounded-2xl shadow-md"
-              >
-                <Image
-                  src={t.screenshot}
-                  alt={`Testimonial from ${t.name}`}
-                  className="w-full rounded-xl"
-                  width={100}
-                  height={100}
-                />
-                <div className="flex items-center mt-4 pt-4 border-t border-gray-100">
+          <section className="use-automation-zoom-in py-10 px-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Column 1 */}
+              <div className="flex flex-col gap-6">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg group">
                   <Image
-                    src={t.image}
-                    alt={t.name}
-                    className="w-10 h-10 rounded-full mr-4"
-                    width={100}
-                    height={100}
+                    src="/assets/5.jpg"
+                    alt="Teal modern building"
+                    fill
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div>
-                    <p className="font-semibold text-sm">{t.name}</p>
-                    <p className="text-xs text-gray-500">@{t.username}</p>
+                </div>
+                <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg group">
+                  <Image
+                    src="/assets/12.jpg"
+                    alt="Curved modern building"
+                    fill
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-sm p-2 text-center">
+                    Architecture Designer
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+
+              {/* Column 2 */}
+              <div className="flex flex-col gap-6">
+                <div className="relative aspect-[3/5] overflow-hidden rounded-2xl shadow-lg group">
+                  <Image
+                    src="/assets/13.jpg"
+                    alt="White apartment building with balconies"
+                    fill
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg group">
+                  <Image
+                    src="/assets/8.jpg"
+                    alt="Circular modern building"
+                    fill
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              </div>
+
+              {/* Column 3 */}
+              <div className="flex flex-col gap-6">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg group">
+                  <Image
+                    src="/assets/3.jpg"
+                    alt="Tall modern building"
+                    fill
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg group">
+                  <Image
+                    src="/assets/9.jpg"
+                    alt="Distinctive architectural building"
+                    fill
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-sm p-2 text-center">
+                    Architecture Designer
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </Container>
       </Wrapper>
 
       {/* pricing */}
-      <Wrapper id="pricing" className="flex flex-col items-center justify-center py-12 relative">
+      <Wrapper
+        id="pricing"
+        className="flex flex-col items-center justify-center py-12 relative"
+      >
         <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
         <Container className="flex flex-col items-center justify-center">
           <div className="max-w-md mx-auto text-center">
@@ -638,7 +693,10 @@ const HomePage = () => {
       {/* testimonials before section*/}
 
       {/* FAQ Section */}
-      <Wrapper id="faq" className="flex flex-col items-center justify-center relative">
+      <Wrapper
+        id="faq"
+        className="flex flex-col items-center justify-center relative"
+      >
         <Container>
           <div className="max-w-md mx-auto text-center">
             <SectionBadge title="FAQ" />
