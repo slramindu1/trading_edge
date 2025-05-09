@@ -103,24 +103,18 @@ const HomePage = () => {
 
             <div className="relative flex items-center py-10 md:py-20 w-full">
               <div className="absolute top-1/2 left-1/2 -z-10 gradient w-3/4 -translate-x-1/2 h-3/4 -translate-y-1/2 inset-0 blur-[10rem]"></div>
-              <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
-                <Image
-                  src="/assets/dashboard.svg"
-                  alt="banner image"
-                  width={1200}
-                  height={1200}
-                  quality={100}
-                  className="rounded-md lg:rounded-xl bg-foreground/10 shadow-2xl ring-1 ring-border"
-                />
-                {/* <iframe
-                  src="https://video.bunnycdn.com/embed/YOUR_VIDEO_ID" // Replace YOUR_VIDEO_ID
-                  loading="lazy"
-                  className="rounded-md lg:rounded-xl bg-foreground/10 shadow-2xl ring-1 ring-border w-full h-[400px] md:h-[600px]"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe> */}
 
-                <BorderBeam size={250} duration={12} delay={9} />
+              <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl w-full">
+                <div className="aspect-video w-full rounded-md lg:rounded-xl overflow-hidden bg-foreground/10 shadow-2xl ring-1 ring-border">
+                  <iframe
+                    src="https://iframe.mediadelivery.net/embed/382750/5064b8be-24d1-4c1e-a3bd-d8d508edd1a5?autoplay=false&controls=true"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+
+                <BorderBeam size={250} duration={15} delay={9} />
               </div>
             </div>
           </div>
