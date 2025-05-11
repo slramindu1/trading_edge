@@ -150,7 +150,7 @@ const Footer = () => {
                 </li>
                 <li className="mt-2">
                   <Link
-                    href=""
+                    href="privacy/terms-conditions"
                     className="hover:text-foreground transition-all duration-300"
                   >
                     Privacy Policy

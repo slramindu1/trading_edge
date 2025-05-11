@@ -1,82 +1,139 @@
-// src/app/privacy/terms-conditions/page.tsx
-import Head from "next/head";
+import Link from "next/link"
+import { ArrowLeft } from "lucide-react"
 
-export default function TermsAndConditions() {
+export default function TermsPage() {
   return (
-    <>
-      <Head>
-        <title>Terms and Conditions | Trading Edge</title>
-        <meta name="description" content="Terms and Conditions for Trading Edge - Sri Lanka" />
-      </Head>
+    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
 
-      <main className="max-w-4xl mx-auto px-4 py-10 text-white">
-        <h1 className="text-3xl font-bold mb-6">Terms and Conditions</h1>
-        <p className="text-sm text-gray-500 mb-6">Last updated: May 9, 2025</p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">General Overview</h2>
-        <p className="mb-4">
-          The services, education and content provided by Trading Edge are for educational purposes only. You must agree
-          not to hold any person or entity responsible for your trading decisions. Trading Edge is <strong>not</strong> a certified
-          financial advisor. Any information discussed does not guarantee or promise future profits or losses. By using
-          this platform, you accept these terms in full.
-        </p>
-        <p className="mb-4">
-          Trading Edge and/or its licensors own the intellectual property rights to the website and its material. You
-          agree not to reproduce, duplicate, copy, sell, resell, or exploit any portion of the services without express
-          written permission. You also agree not to share Trading Edge&apos;s video links or community content.
-        </p>
-        <p className="mb-4">
-          By viewing or using the content on this site, you agree it is for general education. You will not hold anyone
-          responsible for losses or damages from use of the information provided. Trading has large potential rewards,
-          but also large risks. Don&apos;t trade with money you can&apos;t afford to lose.
-        </p>
-        <p className="mb-4">
-          This website does not offer to buy or sell futures, options or currencies. No representation is made that any
-          account will or is likely to achieve profits or losses similar to those discussed. Past performance does not
-          guarantee future results.
-        </p>
+      <div className="container mx-auto px-4 py-12 max-w-4xl relative">
+        <div className="mb-8">
+          <Link 
+            href="/" 
+            className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Home
+          </Link>
+        </div>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Future Price Modifications</h2>
-        <p className="mb-4">
-          Prices for our products may change at any time without notice. We reserve the right to modify or discontinue
-          the service without liability. Existing members will not be charged for future added content.
-        </p>
+        <div className="space-y-8">
+          <div>
+            <h1 className="text-4xl font-bold mb-2">Terms of Use</h1>
+            <p className="text-muted-foreground">Last Updated: 11 May, 2025</p>
+          </div>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Accuracy of Billing and Account Information</h2>
-        <p className="mb-4">
-          You agree to provide current, complete, and accurate purchase and account information. Your data is kept private
-          and used only for invoicing purposes.
-        </p>
+          <div className="prose prose-lg dark:prose-invert max-w-none">
+            <p className="lead">
+              We strongly encourage you to review these Terms of Use before accessing our website. By continuing to
+              browse or interact with this site, you confirm your acceptance of these Terms. If you do not agree, you
+              should refrain from using any part of the website or its services.
+            </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Risk Disclaimer</h2>
-        <p className="mb-4">
-          Do not trade based solely on the information provided. Forex trading carries high risk and is not suitable for
-          all investors. You acknowledge the risk of complete loss. All content is for educational purposes only. Trading
-          Edge is not liable for any outcomes of your trading decisions.
-        </p>
+            <h2 className="text-2xl font-semibold mt-8 mb-4">Accuracy of Information</h2>
+            <p>
+              While efforts are made to ensure that the content provided is accurate and up to date, no guarantees are
+              made regarding its completeness or reliability. Any use of the information on this platform is done solely
+              at your own risk.
+            </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Termination</h2>
-        <p className="mb-4">
-          Sharing platform content (videos, PDFs, links) is strictly prohibited. If a member is found sharing such content,
-          their access will be terminated immediately. Access may also be revoked if payment fails.
-        </p>
+            <h2 className="text-2xl font-semibold mt-8 mb-4">Consent to Electronic Communication</h2>
+            <p>
+              By registering or engaging with this platform, you agree to receive electronic communications, which may
+              include updates, announcements, educational content, or other relevant information. These communications
+              may be sent via email or through the platform itself.
+            </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Refund Disclaimer</h2>
-        <p className="mb-4">
-          Due to the nature of our digital services, refunds are not offered under any circumstances. By purchasing, you
-          agree to this no-refund policy.
-        </p>
+            <h2 className="text-2xl font-semibold mt-8 mb-4">Data Security and User Responsibility</h2>
+            <p>
+              Reasonable measures are taken to protect user data and maintain platform security. However, no online
+              system is entirely secure. By using this platform, you acknowledge that unauthorized access to your data
+              is possible and accept full responsibility for any risks involved.
+            </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Contact</h2>
-        <p className="mb-4">
-          Please contact us via email if you have any questions before purchasing.
-        </p>
-        <ul className="list-none mt-2">
-          <li>Email: support@tradingedge.lk</li>
-          <li>Phone: +94 XX XXX XXXX</li>
-          <li>Address: Trading Edge, Colombo, Sri Lanka</li>
-        </ul>
-      </main>
-    </>
-  );
+            <h2 className="text-2xl font-semibold mt-8 mb-4">Services and Offerings</h2>
+            <p>
+              Some services may be accessible exclusively through the online platform. We aim to represent all content
+              and services as clearly and accurately as possible.
+            </p>
+            <p>
+              We reserve the right—but are not obligated—to limit the availability of any service or offering to
+              particular individuals, locations, or jurisdictions. This may be determined on a case-by-case basis.
+            </p>
+            <p>
+              Descriptions and pricing for any services or features may be updated or modified at any time, without
+              prior notice. We also reserve the right to discontinue any offering at our discretion. Any promotional or
+              service-related information is invalid where restricted by law. We do not guarantee that any content,
+              service, or product you access will meet your expectations, nor do we ensure that all platform issues or
+              errors will be resolved.
+            </p>
+
+            <h3 className="text-xl font-semibold mt-6 mb-3">a) Community Access - Discord</h3>
+            <p>
+              As part of our service, members may gain access to a private Discord community. Continued participation in
+              this space is contingent upon compliance with our community standards.
+            </p>
+            <p>
+              Any breach of these rules—available within your member dashboard—may result in immediate removal from the
+              Discord server, with or without warning.
+            </p>
+            <p>
+              By agreeing to these Terms, you also agree to abide by all guidelines specific to the Discord community
+              and acknowledge that failure to comply may result in revoked access.
+            </p>
+
+            <h2 className="text-2xl font-semibold mt-8 mb-4">Changes to Services and Pricing</h2>
+            <p>
+              All pricing and service offerings provided are subject to change at any time, without prior announcement.
+              We reserve the right to adjust, update, or discontinue any aspect of the services—including content,
+              tools, or features—at our sole discretion and without obligation to notify users in advance.
+            </p>
+            <p>
+              We are not responsible to you or any third party for any adjustments to pricing, changes to the service,
+              or discontinuation of features.
+            </p>
+
+            <h2 className="text-2xl font-semibold mt-8 mb-4">Termination</h2>
+            <p>
+              We reserve the right to suspend or terminate your access to the platform, services, or community without
+              prior notice if you violate any part of these Terms of Use, including but not limited to sharing
+              restricted content or failing to meet payment obligations.
+            </p>
+            <p>
+              Any outstanding dues up to the date of termination remain your responsibility. Termination will result in
+              the immediate loss of access to all courses, content, and the associated Discord Community.
+            </p>
+            <p>
+              If you choose to stop using our services, you may notify us at any time. Please note that termination by
+              either party does not affect any rights or obligations that arose before the termination date.
+            </p>
+
+            <h2 className="text-2xl font-semibold mt-8 mb-4">Refund Policy</h2>
+            <p>
+              Please note that all sales are considered final. As our offerings consist of digital educational content
+              that can be accessed and retained immediately, we do not offer refunds for any reason.
+            </p>
+            <p>By making a purchase, you confirm your understanding and acceptance of this policy.</p>
+            <p>
+              If you have any questions or need further clarification about what is included in your purchase, feel free
+              to contact us before completing your order.
+            </p>
+
+            <h2 className="text-2xl font-semibold mt-8 mb-4">Contact Information</h2>
+            <p>
+              For any questions regarding these Terms, our services, or support inquiries, please contact us at:{" "}
+              <a href="mailto:info@tradingedgefx.com" className="text-primary hover:underline">
+                info@tradingedgefx.com
+              </a>
+            </p>
+            <p>We aim to respond to all inquiries in a timely manner.</p>
+          </div>
+
+          <div className="border-t pt-8 text-sm text-muted-foreground">
+            <p>Last Updated: 11 May, 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
