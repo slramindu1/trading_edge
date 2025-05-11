@@ -246,33 +246,54 @@ export const bentoCards = [
 
 export const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
+    name: "Renaka",
+    username: "@Renaka",
+    body: "After 14 years of trading, I finally have a clear strategy and real confidence.",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
+    name: "Pasindu",
+    username: "@Pasindu",
+    body: "The right mentor and deep insights make success feel achievable.",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Kumari",
+    username: "@Kumari",
+    body: "Step-by-step structure turns complex concepts into easy-to-grasp lessons.",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Mahesh",
+    username: "@Mahesh",
+    body: "Deep market analysis and ongoing guidance have truly transformed my trading.",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Sahan",
+    username: "@Sahan",
+    body: "Other courses failed me; this 12-month mentorship is a complete game changer.",
   },
   {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Manoj",
+    username: "@Manoj",
+    body: "Practical, clear teaching at last—absolutely worth it.",
+  },
+  {
+    name: "Prasanna",
+    username: "@Prasanna",
+    body: "A fresh, clear perspective I haven't found anywhere else.",
+  },
+  {
+    name: "Dhanu Fx",
+    username: "@DhanuFx",
+    body: "Unique approach and real-world insights set this mentorship apart.",
+  },
+  {
+    name: "Dinelka",
+    username: "@Dinelka",
+    body: "The structured system helped me gain consistency and confidence.",
+  },
+  {
+    name: "Saranga",
+    username: "@Saranga",
+    body: "Straightforward, supportive mentorship that consistently delivers results.",
   },
 ];
+
