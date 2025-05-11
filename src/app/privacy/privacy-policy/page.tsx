@@ -6,97 +6,210 @@ export default function PrivacyPolicy() {
     <>
       <Head>
         <title>Privacy Policy | Trading Edge</title>
-        <meta name="description" content="Privacy Policy for Trading Edge - Sri Lanka" />
+        <meta
+          name="description"
+          content="Privacy Policy for Trading Edge - Sri Lanka"
+        />
       </Head>
 
       <main className="max-w-4xl mx-auto px-4 py-10 text-white">
         <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
-        <p className="text-sm text-gray-500 mb-6">Last updated: August 18, 2024</p>
+        <p className="text-sm text-gray-500 mb-6">Last Updated: 11 May, 2025</p>
 
         <p className="mb-4">
-          This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your
-          information when you use our service and tells you about your privacy rights and how the law in Sri Lanka
-          protects you.
+          Your privacy matters to us. This Privacy Policy outlines how we
+          collect, use, store, and safeguard your personal information when you
+          interact with our services. It also explains your rights in relation
+          to your data and how we work to uphold them.
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Interpretation and Definitions</h2>
-        <p className="mb-2"><strong>Company:</strong> Refers to Trading Edge, based in Sri Lanka.</p>
-        <p className="mb-2"><strong>Country:</strong> Refers to Sri Lanka.</p>
-        <p className="mb-2"><strong>Service:</strong> Refers to the website operated by Trading Edge.</p>
-        <p className="mb-2"><strong>Personal Data:</strong> Any information that relates to an identified or identifiable individual.</p>
-        <p className="mb-2"><strong>Usage Data:</strong> Data collected automatically when using the service.</p>
+        <p className="mb-4">
+          We are fully committed to maintaining the confidentiality and security
+          of your personal information. Our aim is to ensure that any data you
+          provide is handled responsibly and used only in ways that you would
+          reasonably expect.
+        </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Collecting and Using Your Personal Data</h2>
+        <p className="mb-4">
+          By continuing to use our platform, you acknowledge and accept the
+          practices described in this Privacy Policy.
+        </p>
+
+        <p className="mb-4">
+          If you do not agree with any part of this policy, we respectfully
+          advise you to discontinue use of our services.
+        </p>
+        <h2 className="text-xl font-semibold mt-8 mb-4">
+          Interpretation and Definitions
+        </h2>
+        <p className="mb-2">
+          <strong>Company:</strong> Refers to Trading Edge, based in Sri Lanka.
+        </p>
+        <p className="mb-2">
+          <strong>Country:</strong> Refers to Sri Lanka.
+        </p>
+        <p className="mb-2">
+          <strong>Service:</strong> Refers to the website operated by Trading
+          Edge.
+        </p>
+        <p className="mb-2">
+          <strong>Personal Data:</strong> Any information that relates to an
+          identified or identifiable individual.
+        </p>
+        <p className="mb-2">
+          <strong>Usage Data:</strong> Data collected automatically when using
+          the service.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">
+          Information We Collect
+        </h2>
         <ul className="list-disc list-inside mb-4">
+          <li>Full name</li>
           <li>Email address</li>
-          <li>First and last name</li>
-          <li>Phone number</li>
-          <li>Address</li>
-          <li>Usage Data such as IP, browser type, and device info</li>
+          <li>Residential address</li>
+          <li>City, state, and postal code</li>
+          <li>Login credentials (username/password)</li>
+          <li>Payment details</li>
+          <li>
+            Any other information voluntarily submitted through forms or direct
+            communication
+          </li>
         </ul>
+        <p className="mb-4">
+          This information is primarily collected during the account
+          registration process or when a payment is made through the website.
+        </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Use of Personal Data</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">
+          How We Use Your Information
+        </h2>
         <ul className="list-disc list-inside mb-4">
-          <li>To provide and maintain our Service</li>
-          <li>To manage your account</li>
-          <li>To contact you via email, phone, or other channels</li>
-          <li>To send you updates, marketing, and promotional content (only if you opt in)</li>
-          <li>For internal analytics and improvements</li>
+          <li>Registering and managing your user account</li>
+          <li>
+            Delivering educational content via our Learning Management System
+            (LMS)
+          </li>
+          <li>
+            Communicating important course updates or administrative notices
+          </li>
+          <li>Responding to inquiries or support requests</li>
+          <li>
+            Improving the performance, security, and user experience of our
+            platform
+          </li>
+          <li>
+            Complying with any applicable legal or regulatory requirements
+          </li>
         </ul>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Retention of Data</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">
+          Data Protection and Security
+        </h2>
         <p className="mb-4">
-          We retain your personal data only for as long as necessary for the purposes outlined in this Privacy Policy,
-          or to comply with applicable laws in Sri Lanka.
+          We implement reasonable technical and organizational measures to
+          safeguard your personal information from unauthorized access,
+          disclosure, alteration, or destruction.
+        </p>
+        <p className="mb-4">
+          While we are not formally registered as a business entity, we are
+          committed to upholding confidentiality and security standards
+          appropriate to digital education platforms. However, no system can
+          guarantee absolute security. Your use of the platform is at your own
+          discretion and risk.
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Data Transfer</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">Information Sharing</h2>
         <p className="mb-4">
-          Your data may be processed outside Sri Lanka but we will ensure adequate data protection safeguards are in
-          place.
+          We do not sell, rent, or disclose your personal information to third
+          parties for commercial purposes.
         </p>
-
-        <h2 className="text-xl font-semibold mt-8 mb-4">Your Data Protection Rights</h2>
+        <p className="mb-2">Your information may be shared only:</p>
         <ul className="list-disc list-inside mb-4">
-          <li>Right to access</li>
-          <li>Right to rectify inaccurate data</li>
-          <li>Right to erasure (in certain cases)</li>
-          <li>Right to withdraw consent at any time</li>
+          <li>
+            With trusted service providers involved in supporting our platform
+            (e.g., hosting, analytics), under strict confidentiality terms
+          </li>
+          <li>When legally required to do so by authorities</li>
+          <li>To protect our rights, property, or safety, or that of others</li>
         </ul>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Cookies and Tracking</h2>
-        <p className="mb-4">
-          We use cookies and similar tracking technologies to improve your browsing experience. You can manage your
-          cookie preferences in your browser settings.
+        <h2 className="text-xl font-semibold mt-8 mb-4">
+          Cookies and Tracking Technologies
+        </h2>
+        <p className="mb-2">
+          Our website may use cookies and similar technologies to:
         </p>
-
-        <h2 className="text-xl font-semibold mt-8 mb-4">Disclosure of Data</h2>
         <ul className="list-disc list-inside mb-4">
-          <li>To service providers (e.g., email delivery, hosting)</li>
-          <li>To comply with Sri Lankan law or court orders</li>
-          <li>To protect the rights or property of Trading Edge</li>
+          <li>Maintain secure sessions</li>
+          <li>Enhance your browsing experience</li>
+          <li>Monitor site performance and user engagement</li>
         </ul>
-
-        <h2 className="text-xl font-semibold mt-8 mb-4">Children&rsquo;s Privacy</h2>
         <p className="mb-4">
-          Our service is not intended for individuals under the age of 13. If we learn we&rsquo;ve collected data from a child
-          under 13 without parental consent, we will delete it.
+          You may disable cookies via your browser settings; however, some
+          features of the site may not function properly without them.
         </p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4">Changes to This Policy</h2>
+        <h2 className="text-xl font-semibold mt-8 mb-4">User Rights</h2>
+        <ul className="list-disc list-inside mb-4">
+          <li>Access the personal information we hold about you</li>
+          <li>Request corrections or updates to your data</li>
+          <li>
+            Request deletion of your account and associated data, subject to
+            legal and administrative constraints
+          </li>
+        </ul>
         <p className="mb-4">
-          We may update our Privacy Policy from time to time. Changes will be posted on this page with an updated
-          &quot;Last Updated&quot; date.
+          To make any such request, please contact us via the email provided
+          below.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">Children’s Privacy</h2>
+        <p className="mb-4">
+          Our platform is intended for individuals aged 18 and over. We do not
+          knowingly collect information from minors. If we become aware of any
+          such data being collected, we will remove it promptly.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">
+          Links to Other Websites
+        </h2>
+        <p className="mb-4">
+          Our website may include links to external websites or third-party
+          services for your convenience or reference. Please note that these
+          websites are not operated or controlled by us. Once you leave our
+          platform and access a third-party site, you are subject to their terms
+          and privacy practices.
+        </p>
+        <p className="mb-4">
+          We encourage you to carefully review the Privacy Policy of any
+          third-party website you choose to visit. We do not control, and are
+          not responsible for, the content, privacy policies, or practices of
+          any external websites or services.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8 mb-4">
+          Changes to This Policy
+        </h2>
+        <p className="mb-4">
+          We reserve the right to update this Privacy Policy at any time. All
+          updates will be posted on this page with the revised date. We
+          recommend reviewing it periodically to stay informed about how your
+          data is protected.
         </p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">Contact Us</h2>
-        <p>
-          If you have any questions about this Privacy Policy, you can contact us at:
+        <p className="mb-4">
+          For questions or concerns regarding this Privacy Policy, please
+          contact:
         </p>
-        <ul className="list-none mt-2">
-          <li>Email: support@tradingedge.lk</li>
-          <li>Phone: +94 XX XXX XXXX</li>
-          <li>Address: Trading Edge, Colombo, Sri Lanka</li>
+        <ul className="list-none mb-4">
+          <li>
+    
+            <a href="mailto:info@tradingedgefx.com" className="text-blue-400">
+              info@tradingedgefx.com
+            </a>
+          </li>
         </ul>
       </main>
     </>
