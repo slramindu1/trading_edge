@@ -142,10 +142,10 @@ const Footer = () => {
               <ul className="mt-4 text-sm text-muted-foreground">
                 <li className="">
                   <Link
-                    href=""
+                    href="privacy/disclaimer"
                     className="hover:text-foreground transition-all duration-300"
                   >
-                    About Us
+                    Disclaimer
                   </Link>
                 </li>
                 <li className="mt-2">
