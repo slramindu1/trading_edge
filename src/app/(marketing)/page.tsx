@@ -104,17 +104,27 @@ const HomePage = () => {
             <div className="relative flex items-center py-10 md:py-20 w-full">
               <div className="absolute top-1/2 left-1/2 -z-10 gradient w-3/4 -translate-x-1/2 h-3/4 -translate-y-1/2 inset-0 blur-[10rem]"></div>
 
-              <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl w-full">
-                <div className="aspect-video w-full rounded-md lg:rounded-xl overflow-hidden bg-foreground/10 shadow-2xl ring-1 ring-border">
+              <div className="relative -m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl w-full">
+                <div className="aspect-video w-full rounded-md lg:rounded-xl overflow-hidden bg-foreground/10 shadow-2xl ring-1 ring-border relative z-10">
                   <iframe
                     src="https://iframe.mediadelivery.net/embed/382750/5064b8be-24d1-4c1e-a3bd-d8d508edd1a5?autoplay=false&controls=true"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    loading="lazy"
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      border: "none",
+                    }}
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                     allowFullScreen
-                    className="w-full h-full"
                   ></iframe>
                 </div>
 
-                <BorderBeam size={250} duration={15} delay={9} />
+                <div className="absolute inset-0 z-0 pointer-events-none">
+                  <BorderBeam size={250} duration={15} delay={9} />
+                </div>
               </div>
             </div>
           </div>
