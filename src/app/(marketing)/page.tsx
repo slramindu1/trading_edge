@@ -319,51 +319,105 @@ const HomePage = () => {
 
           <div className="container mx-auto px-4 py-8 relative z-10">
             {/* Section 1 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="relative z-10">
-                <Image
-                  src="/assets/poster1.png"
-                  alt="The Fanatic Way Course Preview"
-                  width={600}
-                  height={600}
-                  className="rounded-lg w-full"
-                />
+            <div className="py-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div className="relative z-10">
+                  <Image
+                    src="/assets/poster3.svg"
+                    alt="The Fanatic Way Course Preview"
+                    width={600}
+                    height={600}
+                    className="rounded-lg w-full"
+                  />
+                </div>
+
+                <div className="space-y-6">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+                    Trading Edge Course
+                  </h1>
+                  <p className="text-base sm:text-lg text-primary">
+                    A NO BS Trading Course! No Guessing, 12 modules, 180
+                    comprehensive lessons.
+                  </p>
+                  <p className="text-sm sm:text-base">
+                    Our complete framework aligns with all market types
+                    including Forex, Crypto, Indices, and Futures, eliminating
+                    all the noise and errors you&apos;ve learned so far.
+                  </p>
+
+                  <div className="space-y-3">
+                    <h3 className="text-base sm:text-lg font-bold">Results:</h3>
+                    <ul className="space-y-2 text-sm sm:text-base">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                        <span>
+                          Complete clarity and confidence when analyzing charts.
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                        <span>
+                          Obtain discipline to stop overtrading and hesitating.
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                        <span>
+                          Learn when to wait, enter, manage, and exit trades.
+                        </span>
+                      </li>
+                    </ul>
+
+                    <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                      <Button
+                        size="lg"
+                        className="bg-primary hover:bg-primary/90"
+                      >
+                        ENROLL NOW
+                      </Button>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
 
-              <div className="space-y-6">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
-                  Trading Edge Course
-                </h1>
-                <p className="text-base sm:text-lg text-primary">
-                  A NO BS Trading Course! No Guessing, 12 modules, 180
-                  comprehensive lessons.
-                </p>
-                <p className="text-sm sm:text-base">
-                  Our complete framework aligns with all market types including
-                  Forex, Crypto, Indices, and Futures, eliminating all the noise
-                  and errors you&apos;ve learned so far.
-                </p>
+            {/* Section 2 */}
+            <div className="py-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div className="space-y-6">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+                    Trading Edge Flix
+                  </h1>
+                  <p className="text-base sm:text-lg text-primary">
+                    40+ Hours Of Content, Unique Dashboard
+                  </p>
+                  <p className="text-sm sm:text-base">
+                    Unlock your personalized approach with a dashboard featuring
+                    40+ hours of updated content.
+                  </p>
+                  <p className="text-sm sm:text-base">
+                    Learn to become a consistently profitable trader by adapting
+                    to changing market conditions through real analysis and
+                    markups.
+                  </p>
 
-                <div className="space-y-3">
-                  <h3 className="text-base sm:text-lg font-bold">Results:</h3>
+                  <h3 className="text-base sm:text-lg font-bold">
+                    Key Benefits:
+                  </h3>
                   <ul className="space-y-2 text-sm sm:text-base">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
                       <span>
-                        Complete clarity and confidence when analyzing charts.
+                        See profitable strategies in action via live trading.
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                      <span>
-                        Obtain discipline to stop overtrading and hesitating.
-                      </span>
+                      <span>Review your performance.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                      <span>
-                        Learn when to wait, enter, manage, and exit trades.
-                      </span>
+                      <span>Learn to combine all strategies effectively.</span>
                     </li>
                   </ul>
 
@@ -372,121 +426,79 @@ const HomePage = () => {
                       size="lg"
                       className="bg-primary hover:bg-primary/90"
                     >
-                      ENROLL NOW
+                      ENROLL NOW!
                     </Button>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            {/* Section 2 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-8">
-              <div className="space-y-6">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
-                  Trading Edge Flix
-                </h1>
-                <p className="text-base sm:text-lg text-primary">
-                  40+ Hours Of Content, Unique Dashboard
-                </p>
-                <p className="text-sm sm:text-base">
-                  Unlock your personalized approach with a dashboard featuring
-                  40+ hours of updated content.
-                </p>
-                <p className="text-sm sm:text-base">
-                  Learn to become a consistently profitable trader by adapting
-                  to changing market conditions through real analysis and
-                  markups.
-                </p>
-
-                <h3 className="text-base sm:text-lg font-bold">
-                  Key Benefits:
-                </h3>
-                <ul className="space-y-2 text-sm sm:text-base">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                    <span>
-                      See profitable strategies in action via live trading.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                    <span>Review your performance.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                    <span>Learn to combine all strategies effectively.</span>
-                  </li>
-                </ul>
-
-                <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
-                    ENROLL NOW!
-                  </Button>
+                <div className="relative z-10">
+                  <Image
+                    src="/assets/poster1.svg"
+                    alt="The Fanatic Way Course Preview"
+                    width={600}
+                    height={600}
+                    className="rounded-lg w-full"
+                  />
                 </div>
-              </div>
-
-              <div className="relative z-10">
-                <Image
-                  src="/assets/poster1.svg"
-                  alt="The Fanatic Way Course Preview"
-                  width={600}
-                  height={600}
-                  className="rounded-lg w-full"
-                />
               </div>
             </div>
 
             {/* Section 3 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="relative z-10">
-                <Image
-                  src="/assets/poster1.png"
-                  alt="The Fanatic Way Course Preview"
-                  width={600}
-                  height={600}
-                  className="rounded-lg w-full"
-                />
-              </div>
+            <div className="py-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div className="relative z-10">
+                  <Image
+                    src="/assets/poster2.svg"
+                    alt="The Fanatic Way Course Preview"
+                    width={600}
+                    height={600}
+                    className="rounded-lg w-full"
+                  />
+                </div>
 
-              <div className="space-y-6">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
-                  Trading Edge Community
-                </h1>
-                <p className="text-base sm:text-lg text-primary">
-                  40+ Hours Of Content, Unique Dashboard
-                </p>
-                <p className="text-sm sm:text-base">
-                  Access to our team, Daily Analysis, and trading breakdowns of
-                  currency pairs and indices.
-                </p>
+                <div className="space-y-6">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+                    Trading Edge Community
+                  </h1>
+                  <p className="text-base sm:text-lg text-primary">
+                    40+ Hours Of Content, Unique Dashboard
+                  </p>
+                  <p className="text-sm sm:text-base">
+                    Access to our team, Daily Analysis, and trading breakdowns
+                    of currency pairs and indices.
+                  </p>
 
-                <p className="text-sm sm:text-base">
-                  Connect with traders on Discord, get mentorship, learn
-                  insights, and grow with a community.
-                </p>
+                  <p className="text-sm sm:text-base">
+                    Connect with traders on Discord, get mentorship, learn
+                    insights, and grow with a community.
+                  </p>
 
-                <h3 className="text-base sm:text-lg font-bold">Benefits:</h3>
-                <ul className="space-y-2 text-sm sm:text-base">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                    <span>Share ideas with successful traders.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                    <span>
-                      Access daily market analysis and trade breakdowns.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
-                    <span>Receive 1:1 coaching support consistently.</span>
-                  </li>
-                </ul>
+                  <h3 className="text-base sm:text-lg font-bold">Benefits:</h3>
+                  <ul className="space-y-2 text-sm sm:text-base">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                      <span>Share ideas with successful traders.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                      <span>
+                        Access daily market analysis and trade breakdowns.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-primary h-5 w-5 mt-0.5" />
+                      <span>Receive 1:1 coaching support consistently.</span>
+                    </li>
+                  </ul>
 
-                <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
-                    ENROLL NOW!
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                    <Button
+                      size="lg"
+                      className="bg-primary hover:bg-primary/90"
+                    >
+                      ENROLL NOW!
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
