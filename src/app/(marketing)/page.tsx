@@ -393,7 +393,7 @@ const HomePage = () => {
                   </p>
                   <p className="text-sm sm:text-base">
                     Unlock your personalized approach with a dashboard featuring
-                    40+ hours of updated content.
+                    50+ hours of updated content.
                   </p>
                   <p className="text-sm sm:text-base">
                     Learn to become a consistently profitable trader by adapting
