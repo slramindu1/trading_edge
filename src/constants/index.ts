@@ -61,7 +61,7 @@ export const galleryItems = [
     label: "Architecture Designer",
     className: "col-span-1 row-span-1",
   },
-]
+];
 
 export const curiculam = [
   {
@@ -167,7 +167,23 @@ export const pricingCards = [
     duration: "",
     highlight: "Key features",
     buttonText: "Get Started",
-    features: ["Limited projects", "1 Team member", "Basic features"],
+    features: [
+      "Trading Edge Course",
+      "Trading Edge Flix",
+      "Trading Edge Community",
+      "Daily Market Outlook",
+      "180+ Training Videos",
+      "Mindset Room",
+      "Trade Setups",
+      "Weekly Strategy Sessions",
+      "In-Depth Trade Reviews",
+      "1-on-1 Mentor Messaging",
+      "Live Q&A Calls",
+      "Complete Profesional Toolset",
+      "Limited projects",
+      "1 Team member",
+      "Basic features",
+    ],
     priceId: "",
   },
 ];
@@ -296,4 +312,3 @@ export const reviews = [
     body: "Straightforward, supportive mentorship that consistently delivers results.",
   },
 ];
-
