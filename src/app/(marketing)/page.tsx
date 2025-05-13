@@ -389,7 +389,7 @@ const HomePage = () => {
                     Trading Edge Flix
                   </h1>
                   <p className="text-base sm:text-lg text-primary">
-                    40+ Hours Of Content, Unique Dashboard
+                    50+ Hours Of Content, Unique Dashboard
                   </p>
                   <p className="text-sm sm:text-base">
                     Unlock your personalized approach with a dashboard featuring
@@ -461,7 +461,7 @@ const HomePage = () => {
                     Trading Edge Community
                   </h1>
                   <p className="text-base sm:text-lg text-primary">
-                    40+ Hours Of Content, Unique Dashboard
+                    Daily Session Analysis , Markups , Recaps
                   </p>
                   <p className="text-sm sm:text-base">
                     Access to our team, Daily Analysis, and trading breakdowns
