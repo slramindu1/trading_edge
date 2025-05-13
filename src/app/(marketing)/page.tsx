@@ -427,7 +427,7 @@ const HomePage = () => {
 
               <div className="relative z-10">
                 <Image
-                  src="/assets/poster1.png"
+                  src="/assets/poster1.svg"
                   alt="The Fanatic Way Course Preview"
                   width={600}
                   height={600}
