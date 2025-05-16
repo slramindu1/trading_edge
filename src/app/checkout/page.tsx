@@ -163,11 +163,9 @@ export default function CheckoutPage() {
 
   // Add these state variables at the top of your component
   const handlePayWithCard = () => {
-  toast.error("Card payments are not available. Please select Upload Slip.");
-};
+    toast.error("Card payments are not available. Please select Upload Slip.");
+  };
 
-  
-  
   const [isUploading, setIsUploading] = useState(false);
   const [uploadSuccess, setUploadSuccess] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -233,7 +231,7 @@ export default function CheckoutPage() {
           <div className="space-y-6 flex flex-col order-2 md:order-1">
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src="/assets/mokup.avif"
+                src="/assets/checkout1.png"
                 alt="Photon Pro"
                 width={800}
                 height={400}
@@ -260,11 +258,18 @@ export default function CheckoutPage() {
               </div>
 
               <ul className="list-disc pl-5 space-y-1 text-foreground">
-                <li>The Zero To Funded Course</li>
-                <li>The Photon Service</li>
-                <li>130+ Video Lessons</li>
-                <li>50+ Hours of Training</li>
-                <li>24/7 Support</li>
+                <li>Trading Edge Course</li>
+                <li>Trading Edge Flix</li>
+                <li>Trading Edge Community</li>
+                <li>Daily Market Outlook</li>
+                <li>180+ Training Videos</li>
+                <li>Mindset Room</li>
+                <li>Trade Setups</li>
+                <li>Weekly Strategy Sessions</li>
+                <li>In-Depth Trade Reviews</li>
+                <li>1-on-1 Mentor Messaging</li>
+                <li>Live Q&A Calls</li>
+                <li>Complete Profesional Toolset</li>
               </ul>
             </div>
           </div>
@@ -279,7 +284,7 @@ export default function CheckoutPage() {
                       isCouponApplied ? "line-through text-white scale-90" : ""
                     }`}
                   >
-                    $117
+                    $117 USD
                   </span>
                 </h2>
 
@@ -317,7 +322,9 @@ export default function CheckoutPage() {
 
                       <div className="flex justify-between font-semibold mt-4 pt-4 border-t border-border">
                         <span className="text-foreground">Due Now:</span>
-                        <span className="text-foreground">${totalAmount}</span>
+                        <span className="text-foreground">
+                          ${totalAmount} USD
+                        </span>
                       </div>
                     </>
                   )}
@@ -458,10 +465,10 @@ export default function CheckoutPage() {
                       <Input type="file" onChange={handleSlipUpload} />
                       <div className="bg-muted p-4 rounded-md">
                         <p className="font-semibold mb-2">Bank Details:</p>
-                        <p>Account Name: Trading Edge Academy</p>
+                        <p>Account Name: U.G.Dhanuka Prasad Chandrarathna</p>
                         <p>Bank: Commercial Bank</p>
-                        <p>Acc No: 123456789</p>
-                        <p>Branch: Colombo 03</p>
+                        <p>Acc No: 8023105603</p>
+                        <p>Branch: Dambulla</p>
                       </div>
                     </div>
                   )}

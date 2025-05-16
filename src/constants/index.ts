@@ -129,7 +129,7 @@ export const curiculam = [
 export const features = [
   {
     icon: Icons.bolt,
-    title: "The Trading Edge Course",
+    title: "Trading Edge Course",
     info: "Get access to the new and improved Trading Edge 3.0 course featuring over 50+ hours of course content across 180+ video lessons.",
   },
   {
