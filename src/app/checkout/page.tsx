@@ -28,6 +28,7 @@ export default function CheckoutPage() {
   const [pin, setPin] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("");
   const [country, setCountry] = useState("Sri Lanka");
+  const isCardPaymentDisabled = true;
 
   // Form field states
   const [fullName, setFullName] = useState("");
@@ -50,11 +51,14 @@ export default function CheckoutPage() {
     }
 
     try {
-      const res = await fetch("https://lms.tradingedgefx.com/Landing_res/send-code.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
+      const res = await fetch(
+        "https://lms.tradingedgefx.com/Landing_res/send-code.php",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        }
+      );
 
       const data = await res.json();
       if (data.success) {
@@ -70,11 +74,14 @@ export default function CheckoutPage() {
 
   const handleVerify = async () => {
     try {
-      const res = await fetch("https://lms.tradingedgefx.com/Landing_res/verify-code.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, pin }),
-      });
+      const res = await fetch(
+        "https://lms.tradingedgefx.com/Landing_res/verify-code.php",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, pin }),
+        }
+      );
 
       const data = await res.json();
       if (data.success) {
@@ -92,11 +99,14 @@ export default function CheckoutPage() {
     if (!couponCode) return toast.error("Please enter a code");
 
     try {
-      const res = await fetch("https://lms.tradingedgefx.com/Landing_res/check-coupon.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code: couponCode }),
-      });
+      const res = await fetch(
+        "https://lms.tradingedgefx.com/Landing_res/check-coupon.php",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ code: couponCode }),
+        }
+      );
 
       const data = await res.json();
       if (data.success) {
@@ -113,49 +123,54 @@ export default function CheckoutPage() {
     }
   };
 
-  const handlePayWithCard = () => {
-    if (!email || !fullName || !address1 || !city) {
-      toast.error("Please fill all required fields.");
-      return;
-    }
+  // const handlePayWithCard = () => {
+  //   if (!email || !fullName || !address1 || !city) {
+  //     toast.error("Please fill all required fields.");
+  //     return;
+  //   }
 
-    const nameParts = fullName.trim().split(" ");
-    const firstName = nameParts[0];
-    const lastName = nameParts.slice(1).join(" ") || "User";
+  //   const nameParts = fullName.trim().split(" ");
+  //   const firstName = nameParts[0];
+  //   const lastName = nameParts.slice(1).join(" ") || "User";
 
-    const payment = {
-      sandbox: true,
-      merchant_id: "1224246",
-      return_url: "https://your-site.com/checkout-success",
-      cancel_url: "https://your-site.com/checkout-cancel",
-      notify_url: "https://your-site.com/notify",
-      order_id: "ORDER_" + Date.now(),
-      items: "Trading Edge Pro Membership",
-      amount: "117.00",
-      currency: "USD",
-      first_name: firstName,
-      last_name: lastName,
-      email: email,
-      phone: "0771234567",
-      address: address1,
-      city: city,
-      country: country,
-    };
+  //   const payment = {
+  //     sandbox: true,
+  //     merchant_id: "1224246",
+  //     return_url: "https://your-site.com/checkout-success",
+  //     cancel_url: "https://your-site.com/checkout-cancel",
+  //     notify_url: "https://your-site.com/notify",
+  //     order_id: "ORDER_" + Date.now(),
+  //     items: "Trading Edge Pro Membership",
+  //     amount: "117.00",
+  //     currency: "USD",
+  //     first_name: firstName,
+  //     last_name: lastName,
+  //     email: email,
+  //     phone: "0771234567",
+  //     address: address1,
+  //     city: city,
+  //     country: country,
+  //   };
 
-    // @ts-ignore
-    if (typeof payhere !== "undefined") {
-      // @ts-ignore
-      payhere.startPayment(payment);
-    } else {
-      alert("PayHere script not loaded.");
-    }
-  };
+  //   // @ts-ignore
+  //   if (typeof payhere !== "undefined") {
+  //     // @ts-ignore
+  //     payhere.startPayment(payment);
+  //   } else {
+  //     alert("PayHere script not loaded.");
+  //   }
+  // };
 
   // Add these state variables at the top of your component
+  const handlePayWithCard = () => {
+  toast.error("Card payments are not available. Please select Upload Slip.");
+};
+
+  
+  
   const [isUploading, setIsUploading] = useState(false);
   const [uploadSuccess, setUploadSuccess] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  
 
   // Replace the existing handleSlipUpload function with this:
   const handleSlipUpload = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -164,7 +179,6 @@ export default function CheckoutPage() {
     const file = event.target.files[0];
     setSelectedFile(file);
   };
-
 
   const handleConfirmBankPayment = async () => {
     if (!selectedFile) {
@@ -198,9 +212,7 @@ export default function CheckoutPage() {
 
       if (data.success) {
         setUploadSuccess(true);
-        toast.success(
-          "Bank slip uploaded successfully! "
-        );
+        toast.success("Bank slip uploaded successfully! ");
         toast.success("Your Account Will Be Activated Soon. Please Wait");
       } else {
         toast.error(data.message || "Failed to upload bank slip");
@@ -472,13 +484,14 @@ export default function CheckoutPage() {
                   <div className="mt-4">
                     {paymentMethod === "card" && (
                       <Button
-                        className="w-full"
+                        className="w-full opacity-50 cursor-not-allowed"
                         type="button"
                         onClick={handlePayWithCard}
                       >
                         Pay With Card
                       </Button>
                     )}
+
                     {paymentMethod === "slip" && (
                       <Button
                         className="w-full"
