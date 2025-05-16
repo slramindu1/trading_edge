@@ -123,45 +123,6 @@ export default function CheckoutPage() {
     }
   };
 
-  // const handlePayWithCard = () => {
-  //   if (!email || !fullName || !address1 || !city) {
-  //     toast.error("Please fill all required fields.");
-  //     return;
-  //   }
-
-  //   const nameParts = fullName.trim().split(" ");
-  //   const firstName = nameParts[0];
-  //   const lastName = nameParts.slice(1).join(" ") || "User";
-
-  //   const payment = {
-  //     sandbox: true,
-  //     merchant_id: "1224246",
-  //     return_url: "https://your-site.com/checkout-success",
-  //     cancel_url: "https://your-site.com/checkout-cancel",
-  //     notify_url: "https://your-site.com/notify",
-  //     order_id: "ORDER_" + Date.now(),
-  //     items: "Trading Edge Pro Membership",
-  //     amount: "117.00",
-  //     currency: "USD",
-  //     first_name: firstName,
-  //     last_name: lastName,
-  //     email: email,
-  //     phone: "0771234567",
-  //     address: address1,
-  //     city: city,
-  //     country: country,
-  //   };
-
-  //   // @ts-ignore
-  //   if (typeof payhere !== "undefined") {
-  //     // @ts-ignore
-  //     payhere.startPayment(payment);
-  //   } else {
-  //     alert("PayHere script not loaded.");
-  //   }
-  // };
-
-  // Add these state variables at the top of your component
   const handlePayWithCard = () => {
     toast.error("Card payments are not available. Please select Upload Slip.");
   };
@@ -170,7 +131,6 @@ export default function CheckoutPage() {
   const [uploadSuccess, setUploadSuccess] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
-  // Replace the existing handleSlipUpload function with this:
   const handleSlipUpload = async (event: ChangeEvent<HTMLInputElement>) => {
     if (!event.target.files || event.target.files.length === 0) return;
 
@@ -225,10 +185,10 @@ export default function CheckoutPage() {
   return (
     <>
       <ToastContainer position="top-right" autoClose={4000} />
-      <div className="min-h-screen p-4">
+      <div className="min-h-screen p-4 mt-8"> {/* Added mt-8 for top margin */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-20">
           {/* Product Info - Mobile first */}
-          <div className="space-y-6 flex flex-col order-2 md:order-1">
+          <div className="space-y-3 flex flex-col order-2 md:order-1">
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/assets/checkout1.png"
