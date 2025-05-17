@@ -191,7 +191,7 @@ export default function CheckoutPage() {
           <div className="space-y-3 flex flex-col order-2 md:order-1">
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src="/assets/checkout1.png"
+                src="/assets/checkout.png"
                 alt="Photon Pro"
                 width={800}
                 height={400}
