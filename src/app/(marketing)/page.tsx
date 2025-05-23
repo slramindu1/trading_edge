@@ -107,7 +107,7 @@ const HomePage = () => {
               <div className="relative -m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl w-full">
                 <div className="aspect-video w-full rounded-md lg:rounded-xl overflow-hidden bg-foreground/10 shadow-2xl ring-1 ring-border relative z-10">
                   <iframe
-                    src="https://iframe.mediadelivery.net/embed/382750/5064b8be-24d1-4c1e-a3bd-d8d508edd1a5?autoplay=false&controls=true"
+                    src="https://iframe.mediadelivery.net/embed/382750/f1934c77-2c22-44e4-8f08-72066a902fac?autoplay=false&controls=true"
                     loading="lazy"
                     style={{
                       position: "absolute",
