@@ -10,7 +10,7 @@ export const SITE_CONFIG: Metadata = {
     icons: {
         icon: [
             {
-                url: "/logos/icon_logo.png",
+                url: "#",
                 href: "/logos/icon_logo.png",
             }
         ]
@@ -20,7 +20,7 @@ export const SITE_CONFIG: Metadata = {
         description: "Learn Forex Trading On The Lowest Price In Sri Lnaka",
         images: [
             {
-                url: "/logos/icon_logo.png",
+                url: "#",
             }
         ]
     },
@@ -31,7 +31,7 @@ export const SITE_CONFIG: Metadata = {
         description: "Learn Forex Trading On The Lowest Price In Sri Lnaka",
         images: [
             {
-                url: "/logos/icon_logo.png",
+                url: "#",
             }
         ]
     },
