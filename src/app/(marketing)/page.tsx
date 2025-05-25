@@ -36,6 +36,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+
+
 const HomePage = () => {
   const firstRow = reviews.slice(0, reviews.length / 2);
   const secondRow = reviews.slice(reviews.length / 2);
@@ -630,7 +632,7 @@ const HomePage = () => {
                 <Card
                   key={card.title}
                   className={cn(
-                    "flex flex-col w-full max-w-sm border-neutral-700",
+                    "flex flex-col w-full max-w-sm border-neutral-700 text-center",
                     card.title === "Unlimited Saas" && "border-2 border-primary"
                   )}
                 >
