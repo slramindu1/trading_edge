@@ -413,7 +413,7 @@ export default function CheckoutPage() {
                         <SelectItem value="MO">Monaragala</SelectItem>
                         <SelectItem value="RG">Ratnapura</SelectItem>
                         <SelectItem value="KE">Kegalle</SelectItem>
-                        {/* <SelectItem value="OT">Other</SelectItem> */}
+                        <SelectItem value="OT">Other</SelectItem>
                       </SelectContent>
                     </Select>
                     <Input
