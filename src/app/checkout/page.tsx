@@ -185,7 +185,9 @@ export default function CheckoutPage() {
   return (
     <>
       <ToastContainer position="top-right" autoClose={4000} />
-      <div className="min-h-screen p-4 mt-8"> {/* Added mt-8 for top margin */}
+      <div className="min-h-screen p-4 mt-8">
+        {" "}
+        {/* Added mt-8 for top margin */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-20">
           {/* Product Info - Mobile first */}
           <div className="space-y-3 flex flex-col order-2 md:order-1">
@@ -383,12 +385,35 @@ export default function CheckoutPage() {
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <Select onValueChange={setState}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select state" />
+                        <SelectValue placeholder="Select Distric" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="AL">Colombo</SelectItem>
-                        <SelectItem value="AK">Gampaha</SelectItem>
-                        <SelectItem value="CA">Other</SelectItem>
+                        <SelectItem value="CB">Colombo</SelectItem>
+                        <SelectItem value="GM">Gampaha</SelectItem>
+                        <SelectItem value="KL">Kalutara</SelectItem>
+                        <SelectItem value="KD">Kandy</SelectItem>
+                        <SelectItem value="MT">Matale</SelectItem>
+                        <SelectItem value="NR">Nuwara Eliya</SelectItem>
+                        <SelectItem value="GL">Galle</SelectItem>
+                        <SelectItem value="MTL">Matara</SelectItem>
+                        <SelectItem value="HB">Hambantota</SelectItem>
+                        <SelectItem value="JA">Jaffna</SelectItem>
+                        <SelectItem value="KLN">Kilinochchi</SelectItem>
+                        <SelectItem value="MN">Mannar</SelectItem>
+                        <SelectItem value="VT">Vavuniya</SelectItem>
+                        <SelectItem value="ML">Mullaitivu</SelectItem>
+                        <SelectItem value="BT">Batticaloa</SelectItem>
+                        <SelectItem value="AM">Ampara</SelectItem>
+                        <SelectItem value="TR">Trincomalee</SelectItem>
+                        <SelectItem value="KM">Kurunegala</SelectItem>
+                        <SelectItem value="PT">Puttalam</SelectItem>
+                        <SelectItem value="AN">Anuradhapura</SelectItem>
+                        <SelectItem value="PO">Polonnaruwa</SelectItem>
+                        <SelectItem value="BD">Badulla</SelectItem>
+                        <SelectItem value="MO">Monaragala</SelectItem>
+                        <SelectItem value="RG">Ratnapura</SelectItem>
+                        <SelectItem value="KE">Kegalle</SelectItem>
+                        <SelectItem value="OT">Other</SelectItem>
                       </SelectContent>
                     </Select>
                     <Input

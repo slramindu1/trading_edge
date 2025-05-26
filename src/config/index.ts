@@ -37,3 +37,4 @@ export const SITE_CONFIG: Metadata = {
     },
     metadataBase: new URL("https://www.tradingedgefx.com/"),
 };
+    
